@@ -57,7 +57,7 @@ export default class Map extends Component {
 		if (rowIdx === this.state.currentY && colIdx === this.state.currentX) {
 			str += 1;
 		} else if (this.neighbouring(rowIdx, this.state.currentY) && this.neighbouring(colIdx, this.state.currentX)) {
-			str += 0.4;
+			str += 0.5;
 		} else {
 			str += 0;
 		}
