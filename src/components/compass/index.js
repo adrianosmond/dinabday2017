@@ -12,7 +12,8 @@ export default class Compass extends Component {
 	};
 
 	move(direction) {
-		console.log(direction);
+		let ev = new CustomEvent("move-player", {"detail": direction});
+		window.dispatchEvent(ev);
 	}
 
 	render() {

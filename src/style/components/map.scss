@@ -27,6 +27,7 @@
 		font-size: 10px;
 		line-height: 1;
 		transition: opacity $cell-move-time;
+		transition-delay: $cell-move-time / 2;
 
 		&--height {
 			&-0 {
@@ -43,6 +44,7 @@
 		position: absolute;
 		top: 20px;
 		left: 20px;
+		z-index: 1;
 	}
 
 	&__compass-button {
