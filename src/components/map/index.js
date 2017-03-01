@@ -82,6 +82,10 @@ export default class Map extends Component {
 	// 	firebase.database().ref("map/rows/" + rowIdx + "/cols/" + colIdx + "/height").set(newHeight);
 	// }
 
+	cellHeight() {
+		return this.state.map.rows[this.state.currentY].cols[this.state.currentX].height;
+	}
+
 	mapTransform() {
 		var xTransform = ((10.5 - this.state.currentX) * 30) + "px";
 		var yTransform = ((13 - this.state.currentY) * 30) + "px";
@@ -121,7 +125,7 @@ export default class Map extends Component {
 					east={this.canGoEast()}
 					west={this.canGoWest()} />
 				<div class="map__fog"></div>
-				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '')}></div>
+				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '') + (' map__avatar--height-' + this.cellHeight())}></div>
 				<div class="map__inner" style={this.mapTransform()}>
 					{this.state.map.rows.map((row, rowIdx) => {
 						return (
