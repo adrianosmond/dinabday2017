@@ -1,16 +1,13 @@
 import { h, Component } from 'preact';
 
-export default class Compass extends Component {
-	
-	state = {
-		directions: [
-			"north",
-			"south",
-			"east",
-			"west"
-		]
-	};
+const directions = [
+	"north",
+	"south",
+	"east",
+	"west"
+];
 
+class Compass extends Component {
 	move(direction) {
 		let ev = new CustomEvent("move-player", {"detail": direction});
 		window.dispatchEvent(ev);
@@ -19,9 +16,9 @@ export default class Compass extends Component {
 	render() {
 		return (
 			<div class="map__compass">
-				{this.state.directions.map(d => {
+				{directions.map(d => {
 					return (
-						<button class={'map__compass-button map__compass-button--' + d} 
+						<button class={'map__compass-button map__compass-button--' + d}
 								disabled={!this.props[d]}
 								onClick={this.move.bind(this, d)}>{d.substring(0,1)}</button>
 					);
@@ -34,3 +31,5 @@ export default class Compass extends Component {
 		);
 	}
 }
+
+export default Compass;
