@@ -6,13 +6,13 @@ export default class Map extends Component {
 		map: {
 			rows: []
 		},
-		currentX: 12,
-		currentY: 1
+		currentX: 11,
+		currentY: 2
 	};
 
 
 	componentWillMount() {
-		var ref = firebase.database().ref("map").on("value", (result) => {
+		var ref = firebase.database().ref("map").once("value", (result) => {
 			this.setState({map: result.val()});
 		});
 
@@ -49,7 +49,9 @@ export default class Map extends Component {
 	neighbouring(potentialNeighbour, current) {
 		return potentialNeighbour === current
 				|| potentialNeighbour + 1 === current
-				|| potentialNeighbour - 1 === current;
+				|| potentialNeighbour - 1 === current
+				|| potentialNeighbour + 2 === current
+				|| potentialNeighbour - 2 === current;
 	}
 
 	cellOpacity(rowIdx, colIdx) {
@@ -57,7 +59,7 @@ export default class Map extends Component {
 		if (rowIdx === this.state.currentY && colIdx === this.state.currentX) {
 			str += 1;
 		} else if (this.neighbouring(rowIdx, this.state.currentY) && this.neighbouring(colIdx, this.state.currentX)) {
-			str += 0.5;
+			str += 0.6;
 		} else {
 			str += 0;
 		}
@@ -66,8 +68,8 @@ export default class Map extends Component {
 	}
 
 	mapTransform() {
-		var xTransform = ((12 - this.state.currentX) * 30) + "px";
-		var yTransform = ((12 - this.state.currentY) * 30) + "px";
+		var xTransform = ((10.5 - this.state.currentX) * 30) + "px";
+		var yTransform = ((13 - this.state.currentY) * 30) + "px";
 
 		return "transform: rotateX(55deg) scale(3) translateX(" + xTransform + ") translateY(" + yTransform + ");"
 	}
@@ -99,6 +101,7 @@ export default class Map extends Component {
 					south={this.canGoSouth()}
 					east={this.canGoEast()}
 					west={this.canGoWest()} />
+				<div class="map__fog"></div>
 				<div class="map__inner" style={this.mapTransform()}>
 					{this.state.map.rows.map((row, rowIdx) => {
 						return (
