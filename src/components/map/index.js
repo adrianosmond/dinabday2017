@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import Compass from '../compass';
 
 export default class Map extends Component {
 	state = {
@@ -17,34 +16,33 @@ export default class Map extends Component {
 			this.setState({map: result.val()});
 		});
 
-		window.addEventListener("move-player", this.moveMap.bind(this));
+		document.addEventListener("keyup", this.keylistener.bind(this));
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("move-player", this.moveMap);
+		document.removeEventListener("keyup", this.keylistener);
 	}
 
-
-	moveMap(e) {
-		let direction = e.detail;
+	keylistener(e) {
 		let moved = false;
+		let code = e.keyCode;
 
-		if (direction === "north" && this.canGoNorth()) {
+		if (code === 38 && this.canGoNorth()) {
 			moved = true;
 			this.setState({
 				currentY: this.state.currentY - 1
 			});
-		} else if (direction === "south" && this.canGoSouth()) {
+		} else if (code === 40 && this.canGoSouth()) {
 			moved = true;
 			this.setState({
 				currentY: this.state.currentY + 1
 			});
-		} else if (direction === "east" && this.canGoEast()) {
+		} else if (code === 39 && this.canGoEast()) {
 			moved = true;
 			this.setState({
 				currentX: this.state.currentX + 1
 			});
-		} else if (direction === "west" && this.canGoWest()) {
+		} else if (code === 37 && this.canGoWest()) {
 			moved = true;
 			this.setState({
 				currentX: this.state.currentX - 1
@@ -59,7 +57,7 @@ export default class Map extends Component {
 			setTimeout(() => {
 				this.setState({
 					moving: false
-				});				
+				});
 			}, 500);
 		}
 	}
@@ -73,7 +71,7 @@ export default class Map extends Component {
 	}
 
 	cellVisible(rowIdx, colIdx) {
-		return this.neighbouring(rowIdx, this.state.currentY) && 
+		return this.neighbouring(rowIdx, this.state.currentY) &&
 			this.neighbouring(colIdx, this.state.currentX);
 	}
 
@@ -121,10 +119,6 @@ export default class Map extends Component {
 	render() {
 		return (
 			<div class="map">
-				<Compass north={this.canGoNorth()} 
-					south={this.canGoSouth()}
-					east={this.canGoEast()}
-					west={this.canGoWest()} />
 				<div class="map__fog"></div>
 				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '') + (' map__avatar--height-' + this.cellHeight())}></div>
 				<div class="map__inner" style={this.mapTransform()}>

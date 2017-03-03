@@ -63,7 +63,7 @@
 
 			&-2,
 			&-3 {
-				
+
 				position: relative;
 
 				&:before,
@@ -114,54 +114,6 @@
 					transform: translateZ(2 * $mountain-adjust) translateX(-50%) translateY(-50%);
 				}
 			}
-		}
-	}
-
-	&__compass {
-		position: absolute;
-		top: 20px;
-		left: 20px;
-		z-index: 1;
-	}
-
-	&__compass-button {
-		position: absolute;
-		width: 40px;
-		height: 40px;
-		border: 0;
-		background-color: transparent;
-		color: #FFFFFF;
-		font-size: 24px;
-		outline: 0;
-		appearance: none;
-		text-transform: uppercase;
-
-		&--north {
-			top: 0;
-			left: 50%;
-			margin-left: -20px;
-		}
-
-		&--south {
-			bottom: 0;
-			left: 50%;
-			margin-left: -20px;
-		}
-
-		&--east {
-			top: 50%;
-			margin-top: -22px;
-			right: 0;
-		}
-
-		&--west {
-			top: 50%;
-			margin-top: -22px;
-			left: 0;
-		}
-
-		&:disabled {
-			opacity: 0.2;
 		}
 	}
 
