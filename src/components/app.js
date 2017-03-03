@@ -10,22 +10,6 @@ export default class App extends Component {
 	 *	@param {string} event.url	The newly routed URL
 	 */
 
-
-	 /*
-
-		return (
-			<div id="app">
-				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
-			</div>
-		);
-
-	 */
-
 	handleRoute = e => {
 		this.currentUrl = e.url;
 	};
