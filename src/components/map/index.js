@@ -83,6 +83,7 @@ export default class Map extends Component {
 	// }
 
 	cellHeight() {
+		if (this.state.map.rows.length === 0) return 0;
 		return this.state.map.rows[this.state.currentY].cols[this.state.currentX].height;
 	}
 
