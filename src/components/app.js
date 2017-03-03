@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Map from './map';
+import Conversation from './conversation';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -34,6 +35,7 @@ export default class App extends Component {
 			<div id="app">
 				<Router onChange={this.handleRoute}>
 					<Map path="/" />
+					<Conversation path="/conversation/" />
 				</Router>
 			</div>
 		);
