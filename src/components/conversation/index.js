@@ -13,6 +13,7 @@ class Conversation extends Component {
 			"person": 1,
 			"line": "Hang on a minute..."
 		},{
+			"id": "loop-point",
 			"person": 1,
 			"line": "Are we actually having a conversation?"
 		},{
@@ -25,8 +26,8 @@ class Conversation extends Component {
 					"text": "Go home",
 					"linkTo": "/"
 				},{
-					"text": "Go home, with style",
-					"linkTo": "/"
+					"text": "Repeat the conversation",
+					"jumpTo": "loop-point"
 				}]
 			}
 		}],
@@ -66,6 +67,14 @@ class Conversation extends Component {
 					setTimeout(() => {
 						route(option.linkTo);
 					}, 2200);
+				} else if (option.jumpTo) {
+					let idx = this.state.scene.findIndex((line) => {
+						return line.id && line.id === option.jumpTo;
+					});
+
+					this.setState({
+						position: idx
+					});
 				}
 			}
 		} else {
