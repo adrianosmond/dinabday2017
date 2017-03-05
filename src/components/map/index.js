@@ -75,6 +75,12 @@ export default class Map extends Component {
 			this.neighbouring(colIdx, this.state.currentX);
 	}
 
+	character(id) {
+		return (
+			<div class={'character character--' + id}></div>
+		);
+	}
+
 	// cellClick(rowIdx, colIdx, cell) {
 	// 	var newHeight = (cell.height + 1) % 4;
 	// 	firebase.database().ref("map/rows/" + rowIdx + "/cols/" + colIdx + "/height").set(newHeight);
@@ -127,7 +133,9 @@ export default class Map extends Component {
 							<div class="map__row">
 							{row.cols.map((cell, colIdx) => {
 								return (
-									<div class={'map__cell map__cell--height-' + cell.height + (!this.cellVisible(rowIdx, colIdx) ? ' map__cell--hidden': '') }></div>
+									<div class={'map__cell map__cell--height-' + cell.height + (!this.cellVisible(rowIdx, colIdx) ? ' map__cell--hidden': '') }>
+										{(this.cellVisible(rowIdx, colIdx) && cell.character ? this.character(cell.character) : '')}
+									</div>
 								);
 							})}
 							</div>

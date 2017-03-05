@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
 
-class Conversation extends Component {
+export default class Conversation extends Component {
 	state = {
 		scene: [{
 			"person": 1,
@@ -126,6 +126,4 @@ class Conversation extends Component {
 			</div>
 		);
 	}
-}
-
-export default Conversation;
+};

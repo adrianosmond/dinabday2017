@@ -11,6 +11,7 @@
 	overflow: hidden;
 
 	&__inner {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -19,6 +20,7 @@
 	}
 
 	&__fog {
+		// visibility: hidden;
 		pointer-events: none;
 		$cells-to-cover: 8;
 		$cells-to-show: 5;
@@ -32,7 +34,7 @@
 		margin-left: -$cell-size * ($cells-to-cover / 2);
 		transform: rotateX(55deg) scale(3);
 		box-shadow: rgba(#333, 1) 0 0 30px 40px inset;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	&__row {
@@ -41,12 +43,12 @@
 	}
 
 	&__cell {
+		position: relative;
 		border: 1px solid rgba(0,0,0,0.1);
 		width: $cell-size;
 		height: $cell-size;
 		font-size: 10px;
 		line-height: 1;
-		// transition-delay: $cell-move-time / 4;
 
 		&--hidden {
 			visibility: hidden;
@@ -122,7 +124,6 @@
 	$avatar-multiplier: 3;
 	$multiplied-avatar-width: $avatar-width * $avatar-multiplier;
 	$multiplied-avatar-height: $avatar-height * $avatar-multiplier;
-
 
 	&__avatar {
 		position: absolute;
