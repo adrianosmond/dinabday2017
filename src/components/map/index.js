@@ -15,6 +15,9 @@ export default class Map extends Component {
 			},
 			"pirate": {
 				"currentConversation": "9a97"
+			},
+			"fighter": {
+
 			}
 		},
 		moving: false
@@ -71,7 +74,9 @@ export default class Map extends Component {
 			let character = this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].character;
 			if (character) {
 				let conversationURL = "/conversation/" + this.state.characters[character].currentConversation;
-				route(conversationURL);
+				if (conversationURL) {
+					route(conversationURL);
+				}
 			}
 		}
 

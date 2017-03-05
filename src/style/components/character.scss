@@ -19,6 +19,28 @@
 		background-image: url("/assets/images/pirate.png");
 	}
 
+	$fighter-width: 30px;
+	$fighter-height: 34px;
+	&--fighter {
+		width: $fighter-width * $multiplier;
+		height: $fighter-height * (3 * $multiplier);
+		margin-left: -$fighter-width / 2 * $multiplier;
+		background-size: 400% 100%;
+		// background-position: left center;
+		background-image: url("/assets/images/fighter.png");
+		animation: jump 1s infinite steps(4);
+
+		@keyframes jump {
+			0% {
+				background-position: 0%;
+			}
+
+			100% {
+				background-position: -$fighter-width * $multiplier * 4;
+			}
+		}
+	}
+
 	$ship-multiplier: 3;
 	$ship-width: 19px;
 	$ship-height: 25px;

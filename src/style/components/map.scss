@@ -166,8 +166,12 @@
 	}
 
 	@keyframes walk {
-		0% { background-position: -$multiplied-avatar-width; }
-		100% { background-position: $multiplied-avatar-width * -3; }
+		0% {
+			background-position: -$multiplied-avatar-width;
+		}
+		100% {
+			background-position: $multiplied-avatar-width * -3;
+		}
 	}
 
 	&__character {
