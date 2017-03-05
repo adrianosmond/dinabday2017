@@ -82,8 +82,10 @@
 
 	$dina-width: 88px;
 	$dina-height: 200px;
-	$wiz-width: 168px;
-	$wiz-height: 264px;
+	$wizard-width: 160px;
+	$wizard-height: 264px;
+	$pirate-width: 160px;
+	$pirate-height: 208px;
 
 	&__person {
 		position: relative;
@@ -98,10 +100,16 @@
 			background-image: url("/assets/images/dina.png");
 		}
 
-		&--wiz {
-			width: $wiz-width;
-			height: $wiz-height;
-			background-image: url("/assets/images/wiz.png");
+		&--wizard {
+			width: $wizard-width;
+			height: $wizard-height;
+			background-image: url("/assets/images/wizard.png");
+		}
+
+		&--pirate {
+			width: $pirate-width;
+			height: $pirate-height;
+			background-image: url("/assets/images/pirate.png");
 		}
 	}
 
@@ -149,9 +157,14 @@
 			}
 		}
 
-		&--wiz {
-			right: $wiz-width + 16px;
-			bottom: 0.9 * $wiz-height;	
+		&--wizard {
+			right: $wizard-width + 16px;
+			bottom: 0.9 * $wizard-height;	
+		}
+
+		&--pirate {
+			right: $pirate-width + 16px;
+			bottom: 0.9 * $pirate-height;	
 		}
 	}
 

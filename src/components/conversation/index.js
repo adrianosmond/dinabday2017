@@ -3,54 +3,40 @@ import { route } from 'preact-router';
 
 export default class Conversation extends Component {
 	state = {
-		scene: [{
-			"person": 1,
-			"line": "Hi!"
-		},{
-			"person": 2,
-			"line": "Hello yourself."
-		},{
-			"person": 1,
-			"line": "Hang on a minute..."
-		},{
-			"id": "loop-point",
-			"person": 1,
-			"line": "Are we actually having a conversation?"
-		},{
-			"person": 2,
-			"line": "I dunno. You're doing most of the talking"
-		},{
-			"decision": {
-				"text": "What will you do now?",
-				"options": [{
-					"text": "Go home",
-					"linkTo": "/"
-				},{
-					"text": "Repeat the conversation",
-					"jumpTo": "loop-point"
-				}]
-			}
-		}],
-		person2: "wiz",
+		scene: [],
 		position: 0,
 		started: false,
 		decided: false
 	}
 
 	componentWillMount() {
-		document.addEventListener("keyup", this.keylistener.bind(this));
+		let cid = this.props.conversationId;
+		if (cid) {
+			let ref = firebase.database().ref("conversations/" + cid).once("value", (result) => {
+				this.setState(result.val());
+				setTimeout(() => {
+					this.setState({
+						started: true
+					});
+				}, 200);
+			});
+		}
+		this.boundKeyListener = this.keylistener.bind(this)
+		document.addEventListener("keyup", this.boundKeyListener);
 	}
 
 	componentWillUnmount() {
-		document.removeEventListener("keyup", this.keylistener);
+		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
-	componentDidMount() {
+	linkSomewhere(linkTo) {
+		this.setState({
+			decided: true,
+			started: false
+		});
 		setTimeout(() => {
-			this.setState({
-				started: true
-			});
-		}, 500);
+			route(linkTo);
+		}, 2200);
 	}
 
 	keylistener(e) {
@@ -60,13 +46,7 @@ export default class Conversation extends Component {
 			if (code >= 49 && code < 49 + decision.options.length) {
 				let option = decision.options[code - 49];
 				if (option.linkTo) {
-					this.setState({
-						decided: true,
-						started: false
-					});
-					setTimeout(() => {
-						route(option.linkTo);
-					}, 2200);
+					this.linkSomewhere(option.linkTo);
 				} else if (option.jumpTo) {
 					let idx = this.state.scene.findIndex((line) => {
 						return line.id && line.id === option.jumpTo;
@@ -82,6 +62,10 @@ export default class Conversation extends Component {
 				this.setState({
 					position: this.state.position + 1
 				});
+
+				if (this.state.scene[this.state.position].linkTo) {
+					this.linkSomewhere(this.state.scene[this.state.position].linkTo);
+				} 
 			}
 		}	
 	}
@@ -91,6 +75,17 @@ export default class Conversation extends Component {
 		return (
 			<div class={'conversation__bubble conversation__bubble--' + person}>{text}</div>
 		)
+	}
+
+	people() {
+		return (
+			<div class="conversation__people">
+				<div class="conversation__person conversation__person--dina"></div>
+				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
+				<div class={'conversation__person conversation__person--' + this.state.person2}></div>
+				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.state.person2) : '' }
+			</div>
+		);
 	}
 
 	decision() {
@@ -116,13 +111,8 @@ export default class Conversation extends Component {
 				<div class="conversation__bg conversation__bg--3"></div>
 				<div class="conversation__bg conversation__bg--4"></div>
 				<div class="conversation__bg conversation__bg--5"></div>
-				<div class="conversation__people">
-					<div class="conversation__person conversation__person--dina"></div>
-					{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
-					<div class={'conversation__person conversation__person--' + this.state.person2}></div>
-					{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.state.person2) : '' }
-				</div>
-				{ this.state.scene[this.state.position].decision ? this.decision() : '' }
+				{ this.state.scene.length > 0? this.people() : ''}
+				{ this.state.scene.length > 0 && this.state.scene[this.state.position].decision ? this.decision() : '' }
 			</div>
 		);
 	}

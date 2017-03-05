@@ -1,58 +1,90 @@
 import { h, Component } from 'preact';
+import { route } from 'preact-router';
+
+let blockKeys = false;
 
 export default class Map extends Component {
 	state = {
+		loading: true,
 		map: {
 			rows: []
 		},
-		currentX: 11,
-		currentY: 2,
+		characters: {
+			"wizard": {
+				"currentConversation": "94f6"
+			},
+			"pirate": {
+				"currentConversation": "9a97"
+			}
+		},
 		moving: false
 	};
 
-
 	componentWillMount() {
-		var ref = firebase.database().ref("map").once("value", (result) => {
-			this.setState({map: result.val()});
+		let ref = firebase.database().ref("map").once("value", (result) => {
+			this.setState({
+				map: result.val(),
+			});
+
+			setTimeout(() => {
+				this.setState({
+					map: result.val(),
+					loading: false
+				});
+			}, 100)
 		});
 
-		document.addEventListener("keyup", this.keylistener.bind(this));
+		this.boundKeyListener = this.keylistener.bind(this);
+
+		document.addEventListener("keyup", this.boundKeyListener);
 	}
 
 	componentWillUnmount() {
-		document.removeEventListener("keyup", this.keylistener);
+		firebase.database().ref("map/currentPosition").set(this.state.map.currentPosition);
+		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
 	keylistener(e) {
+		if (blockKeys || this.state.map.rows.length === 0) return;
+
 		let moved = false;
 		let code = e.keyCode;
+		let newMap;
 
 		if (code === 38 && this.canGoNorth()) {
 			moved = true;
-			this.setState({
-				currentY: this.state.currentY - 1
-			});
+			newMap = JSON.parse(JSON.stringify(this.state.map));
+			newMap.currentPosition.y -= 1
 		} else if (code === 40 && this.canGoSouth()) {
 			moved = true;
-			this.setState({
-				currentY: this.state.currentY + 1
-			});
+			newMap = JSON.parse(JSON.stringify(this.state.map));
+			newMap.currentPosition.y += 1
 		} else if (code === 39 && this.canGoEast()) {
 			moved = true;
-			this.setState({
-				currentX: this.state.currentX + 1
-			});
+			newMap = JSON.parse(JSON.stringify(this.state.map));
+			newMap.currentPosition.x += 1
 		} else if (code === 37 && this.canGoWest()) {
 			moved = true;
-			this.setState({
-				currentX: this.state.currentX - 1
-			});
+			newMap = JSON.parse(JSON.stringify(this.state.map));
+			newMap.currentPosition.x -= 1
+		} else if (code === 32) {
+			let character = this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].character;
+			if (character) {
+				let conversationURL = "/conversation/" + this.state.characters[character].currentConversation;
+				route(conversationURL);
+			}
 		}
 
 		if (moved) {
+			blockKeys = true;
 			this.setState({
+				map: newMap,
 				moving: true
 			});
+
+			setTimeout(() => {
+				blockKeys = false;
+			}, 350);
 
 			setTimeout(() => {
 				this.setState({
@@ -71,29 +103,31 @@ export default class Map extends Component {
 	}
 
 	cellVisible(rowIdx, colIdx) {
-		return this.neighbouring(rowIdx, this.state.currentY) &&
-			this.neighbouring(colIdx, this.state.currentX);
+		return this.neighbouring(rowIdx, this.state.map.currentPosition.y) &&
+			this.neighbouring(colIdx, this.state.map.currentPosition.x);
 	}
 
 	character(id) {
 		return (
-			<div class={'character character--' + id}></div>
+			<div class={'map__character character character--' + id}></div>
 		);
 	}
 
 	// cellClick(rowIdx, colIdx, cell) {
-	// 	var newHeight = (cell.height + 1) % 4;
+	// 	let newHeight = (cell.height + 1) % 4;
 	// 	firebase.database().ref("map/rows/" + rowIdx + "/cols/" + colIdx + "/height").set(newHeight);
 	// }
 
 	cellHeight() {
 		if (this.state.map.rows.length === 0) return 0;
-		return this.state.map.rows[this.state.currentY].cols[this.state.currentX].height;
+		return this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].height;
 	}
 
 	mapTransform() {
-		var xTransform = ((10.5 - this.state.currentX) * 30) + "px";
-		var yTransform = ((13 - this.state.currentY) * 30) + "px";
+		if (this.state.map.rows.length === 0) return "transform: rotateX(55deg) scale(3); transition-duration: 0s;";
+
+		let xTransform = ((10.5 - this.state.map.currentPosition.x) * 30) + "px";
+		let yTransform = ((13 - this.state.map.currentPosition.y) * 30) + "px";
 
 		return "transform: rotateX(55deg) scale(3) translateX(" + xTransform + ") translateY(" + yTransform + ");"
 	}
@@ -104,27 +138,27 @@ export default class Map extends Component {
 
 	canGoNorth() {
 		if (this.state.map.rows.length === 0) return false;
-		return this.terrainPassable(this.state.map.rows[this.state.currentY - 1].cols[this.state.currentX].height);
+		return this.terrainPassable(this.state.map.rows[this.state.map.currentPosition.y - 1].cols[this.state.map.currentPosition.x].height);
 	}
 
 	canGoSouth() {
 		if (this.state.map.rows.length === 0) return false;
-		return this.terrainPassable(this.state.map.rows[this.state.currentY + 1].cols[this.state.currentX].height);
+		return this.terrainPassable(this.state.map.rows[this.state.map.currentPosition.y + 1].cols[this.state.map.currentPosition.x].height);
 	}
 
 	canGoEast() {
 		if (this.state.map.rows.length === 0) return false;
-		return this.terrainPassable(this.state.map.rows[this.state.currentY].cols[this.state.currentX + 1].height);
+		return this.terrainPassable(this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x + 1].height);
 	}
 
 	canGoWest() {
 		if (this.state.map.rows.length === 0) return false;
-		return this.terrainPassable(this.state.map.rows[this.state.currentY].cols[this.state.currentX - 1].height);
+		return this.terrainPassable(this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x - 1].height);
 	}
 
 	render() {
 		return (
-			<div class="map">
+			<div class={'map' + (this.state.loading? ' map--loading' : '')}>
 				<div class="map__fog"></div>
 				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '') + (' map__avatar--height-' + this.cellHeight())}></div>
 				<div class="map__inner" style={this.mapTransform()}>
