@@ -26,9 +26,8 @@
 		height: $fighter-height * (3 * $multiplier);
 		margin-left: -$fighter-width / 2 * $multiplier;
 		background-size: 400% 100%;
-		// background-position: left center;
 		background-image: url("/assets/images/fighter.png");
-		animation: jump 1s infinite steps(4);
+		animation: jump 0.8s infinite steps(4);
 
 		@keyframes jump {
 			0% {

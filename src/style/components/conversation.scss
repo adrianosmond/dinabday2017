@@ -86,6 +86,8 @@
 	$wizard-height: 264px;
 	$pirate-width: 160px;
 	$pirate-height: 208px;
+	$fighter-width: 240px;
+	$fighter-height: 272px;
 
 	&__person {
 		position: relative;
@@ -110,6 +112,24 @@
 			width: $pirate-width;
 			height: $pirate-height;
 			background-image: url("/assets/images/pirate.png");
+		}
+
+		&--fighter {
+			width: $fighter-width;
+			height: $fighter-height;
+			background-image: url("/assets/images/fighter.png");
+			background-size: 400% 100%;
+			animation: fighter-jump 0.8s infinite steps(4);
+
+			@keyframes fighter-jump {
+				0% {
+					background-position: 0%;
+				}
+
+				100% {
+					background-position: -$fighter-width * 4;
+				}
+			}
 		}
 	}
 
@@ -163,6 +183,11 @@
 		}
 
 		&--pirate {
+			right: $pirate-width + 16px;
+			bottom: 0.9 * $pirate-height;	
+		}
+
+		&--fighter {
 			right: $pirate-width + 16px;
 			bottom: 0.9 * $pirate-height;	
 		}

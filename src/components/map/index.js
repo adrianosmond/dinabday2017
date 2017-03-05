@@ -17,7 +17,7 @@ export default class Map extends Component {
 				"currentConversation": "9a97"
 			},
 			"fighter": {
-
+				"currentConversation": "134f"
 			}
 		},
 		moving: false
@@ -95,7 +95,7 @@ export default class Map extends Component {
 				this.setState({
 					moving: false
 				});
-			}, 500);
+			}, 750);
 		}
 	}
 
