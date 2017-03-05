@@ -1,4 +1,4 @@
-.conversation {
+.scene {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -39,28 +39,28 @@
 
 		&--2 {
 			background-image: url("/assets/images/landscape-2.png");
-			.conversation--not-started & {
+			.scene--not-started & {
 				transform: translateY(20%);
 			}
 		}
 		
 		&--3 {
 			background-image: url("/assets/images/landscape-3.png");
-			.conversation--not-started & {
+			.scene--not-started & {
 				transform: translateY(30%);
 			}
 		}
 		
 		&--4 {
 			background-image: url("/assets/images/landscape-4.png");
-			.conversation--not-started & {
+			.scene--not-started & {
 				transform: translateY(40%);
 			}
 		}
 		
 		&--5 {
 			background-image: url("/assets/images/landscape-5.png");
-			.conversation--not-started & {
+			.scene--not-started & {
 				transform: translateY(50%);
 			}
 		}
@@ -75,9 +75,13 @@
 		padding-bottom: 25px;
 		transition: transform $enter-duration;
 		
-		.conversation--not-started & {
+		.scene--not-started & {
 			transform: translateY(500px);
 		}
+
+		&--fight {
+			width: 1000px;
+		}		
 	}
 
 	$dina-width: 88px;
@@ -86,8 +90,11 @@
 	$wizard-height: 264px;
 	$pirate-width: 160px;
 	$pirate-height: 208px;
-	$fighter-width: 240px;
+	$brute-width: 584px;
+	$brute-height: 352px;
+	$fighter-width: 344px;
 	$fighter-height: 272px;
+	$fighter-frames: 5;
 
 	&__person {
 		position: relative;
@@ -114,12 +121,18 @@
 			background-image: url("/assets/images/pirate.png");
 		}
 
+		&--brute {
+			width: $brute-width;
+			height: $brute-height;
+			background-image: url("/assets/images/brute.png");
+		}
+
 		&--fighter {
 			width: $fighter-width;
 			height: $fighter-height;
 			background-image: url("/assets/images/fighter.png");
-			background-size: 400% 100%;
-			animation: fighter-jump 0.8s infinite steps(4);
+			background-size: (100% * $fighter-frames) 100%;
+			animation: fighter-jump 0.8s infinite steps($fighter-frames);
 
 			@keyframes fighter-jump {
 				0% {
@@ -127,14 +140,14 @@
 				}
 
 				100% {
-					background-position: -$fighter-width * 4;
+					background-position: -$fighter-width * $fighter-frames;
 				}
 			}
 		}
 	}
 
 	&__bubble {
-		.conversation--not-started & {
+		.scene--not-started & {
 			visibility: hidden;
 		}
 		transition: visibility 0s;
@@ -188,8 +201,8 @@
 		}
 
 		&--fighter {
-			right: $pirate-width + 16px;
-			bottom: 0.9 * $pirate-height;	
+			right: $fighter-width * 0.8;
+			bottom: 0.9 * $fighter-height;	
 		}
 	}
 

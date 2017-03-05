@@ -73,16 +73,16 @@ export default class Conversation extends Component {
 	bubble(person) {
 		let text = this.state.scene[this.state.position].line;
 		return (
-			<div class={'conversation__bubble conversation__bubble--' + person}>{text}</div>
+			<div class={'scene__bubble scene__bubble--' + person}>{text}</div>
 		)
 	}
 
 	people() {
 		return (
-			<div class="conversation__people">
-				<div class="conversation__person conversation__person--dina"></div>
+			<div class="scene__people">
+				<div class="scene__person scene__person--dina"></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
-				<div class={'conversation__person conversation__person--' + this.state.person2}></div>
+				<div class={'scene__person scene__person--' + this.state.person2}></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.state.person2) : '' }
 			</div>
 		);
@@ -91,12 +91,12 @@ export default class Conversation extends Component {
 	decision() {
 		let decision = this.state.scene[this.state.position].decision;
 		return (
-			<div class={'conversation__decision' + (this.state.decided ? ' conversation__decision--done': '')}>
-				<p class="conversation__decision-question">{decision.text}</p>
-				<ul class="conversation__decision-options">
+			<div class={'scene__decision' + (this.state.decided ? ' scene__decision--done': '')}>
+				<p class="scene__decision-question">{decision.text}</p>
+				<ul class="scene__decision-options">
 					{decision.options.map((opt, idx) => {
 						return (
-							<li class="conversation__decision-option">{idx + 1}: {opt.text}</li>
+							<li class="scene__decision-option">{idx + 1}: {opt.text}</li>
 						)
 					})}
 				</ul>
@@ -106,11 +106,11 @@ export default class Conversation extends Component {
 
 	render() {
 		return (
-			<div class={'conversation ' + (!this.state.started? ' conversation--not-started' : '')}>
-				<div class="conversation__bg conversation__bg--2"></div>
-				<div class="conversation__bg conversation__bg--3"></div>
-				<div class="conversation__bg conversation__bg--4"></div>
-				<div class="conversation__bg conversation__bg--5"></div>
+			<div class={'scene ' + (!this.state.started? ' scene--not-started' : '')}>
+				<div class="scene__bg scene__bg--2"></div>
+				<div class="scene__bg scene__bg--3"></div>
+				<div class="scene__bg scene__bg--4"></div>
+				<div class="scene__bg scene__bg--5"></div>
 				{ this.state.scene.length > 0? this.people() : ''}
 				{ this.state.scene.length > 0 && this.state.scene[this.state.position].decision ? this.decision() : '' }
 			</div>
