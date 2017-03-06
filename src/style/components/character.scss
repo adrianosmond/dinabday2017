@@ -26,7 +26,7 @@
 		width: $fighter-width * $multiplier;
 		height: $fighter-height * (3 * $multiplier);
 		margin-left: -$fighter-width / 1.8 * $multiplier;
-		background-size: (100% * $fighter-frames) 100%;
+		background-size: (100% * $fighter-frames) 200%;
 		background-image: url("/assets/images/fighter.png");
 	}
 

@@ -6,6 +6,7 @@
 	height: 100vh;
 	background-image: url("/assets/images/landscape-1.jpg");
 	background-size: cover;
+	background-position: left top;
 	font-family: "Press Start 2P";
 	font-size: 24px;
 
@@ -125,22 +126,60 @@
 			width: $brute-width;
 			height: $brute-height;
 			background-image: url("/assets/images/brute.png");
+
+			&-punching {
+				animation: brute-punch 0.5s steps(1);
+			}
+			
+			&-look-back {
+				background-position: 100%;
+			}
+
+			@keyframes brute-punch {
+				0% {
+					background-position: 50%;
+				}
+
+				100% {
+					background-position: 0%;
+				}
+			}
 		}
 
 		&--fighter {
 			width: $fighter-width;
 			height: $fighter-height;
 			background-image: url("/assets/images/fighter.png");
-			background-size: (100% * $fighter-frames) 100%;
+			background-size: (100% * $fighter-frames) 200%;
 			animation: fighter-jump 0.8s infinite steps($fighter-frames);
+			transition: transform 1s;
+
+			.scene--not-started & {
+				transition: none;
+			}
+
+			&-won {
+				background-position-y: -100%;
+				animation: fighter-run-away 0.8s infinite steps($fighter-frames - 1);
+			}
 
 			@keyframes fighter-jump {
 				0% {
-					background-position: 0%;
+					background-position-x: 0%;
 				}
 
 				100% {
-					background-position: -$fighter-width * $fighter-frames;
+					background-position-x: -$fighter-width * $fighter-frames;
+				}
+			}
+
+			@keyframes fighter-run-away {
+				0% {
+					background-position-x: 0%;
+				}
+
+				100% {
+					background-position-x: -$fighter-width * ($fighter-frames - 1);
 				}
 			}
 		}
@@ -228,5 +267,24 @@
 
 	&__decision-option {
 		margin-top: 4px;
+	}
+
+	&__instruction {
+		position: absolute;
+		width: 1000px;
+		top: 50px;
+		left: 50%;
+		margin-left: -350px;
+		color: #fff;
+	}
+
+	&__input {
+		appearance: none;
+		border: 0;
+		border-bottom: 4px solid #fff;
+		font: inherit;
+		color: inherit;
+		background-color: transparent;
+		outline: 0;
 	}
 }
