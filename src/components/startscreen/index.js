@@ -42,7 +42,7 @@ export default class StartScreen extends Component {
 				<div class="scene__bg scene__bg--parallax scene__bg--5"></div>
 				<div class="scene__logo"></div>
 				<div class="scene__people scene__people--wide">
-					<div class="scene__person scene__person--dina"></div>
+					<div class="scene__person scene__person--dina scene__person--dina-walking"></div>
 				</div>
 				<div class="scene__instruction scene__instruction--bottom scene__instruction--blink">PRESS SPACE TO START</div>
 			</div>

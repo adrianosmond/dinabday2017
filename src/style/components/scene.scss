@@ -170,8 +170,10 @@
 			width: $dina-width;
 			height: $dina-height;
 			background-image: url("/assets/images/dina.png");
-			// background-position: 2 * $dina-width;
-			animation: dina-walk 0.75s steps(2) infinite;
+
+			&-walking {
+				animation: dina-walk 0.75s steps(2) infinite;
+			}
 
 			@keyframes dina-walk {
 				0% {
