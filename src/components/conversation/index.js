@@ -11,9 +11,21 @@ export default class Conversation extends Component {
 
 	componentWillMount() {
 		let cid = this.props.conversationId;
+		console.log(cid);
+
 		if (cid) {
-			let ref = firebase.database().ref("conversations/" + cid).once("value", (result) => {
-				this.setState(result.val());
+			let ref = firebase.database().ref("conversations").once("value", (result) => {
+				let conversationData = result.val()[cid];
+				let stateId = result.val()["currentState"];
+
+				conversationData.position = conversationData.scene.findIndex((line) => {
+					return line.id && line.id === stateId;
+				});
+
+				console.log(conversationData);
+
+				this.setState(conversationData);
+
 				setTimeout(() => {
 					this.setState({
 						started: true
@@ -41,6 +53,7 @@ export default class Conversation extends Component {
 
 	keylistener(e) {
 		let code = e.keyCode;
+
 		if (this.state.scene[this.state.position].decision) {
 			let decision = this.state.scene[this.state.position].decision;
 			if (code >= 49 && code < 49 + decision.options.length) {
@@ -63,11 +76,16 @@ export default class Conversation extends Component {
 					position: this.state.position + 1
 				});
 
+				let newState = this.state.scene[this.state.position].setState;
+				if (newState) {
+					firebase.database().ref("conversations/currentState").set(newState);
+				}
+
 				if (this.state.scene[this.state.position].linkTo) {
 					this.linkSomewhere(this.state.scene[this.state.position].linkTo);
-				} 
+				}
 			}
-		}	
+		}
 	}
 
 	bubble(person) {
@@ -82,8 +100,8 @@ export default class Conversation extends Component {
 			<div class="scene__people">
 				<div class="scene__person scene__person--dina"></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
-				<div class={'scene__person scene__person--' + this.state.person2}></div>
-				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.state.person2) : '' }
+				<div class={'scene__person scene__person--' + this.props.conversationId}></div>
+				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.props.conversationId) : '' }
 			</div>
 		);
 	}

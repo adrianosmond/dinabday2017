@@ -9,17 +9,6 @@ export default class Map extends Component {
 		map: {
 			rows: []
 		},
-		characters: {
-			"wizard": {
-				"currentConversation": "94f6"
-			},
-			"pirate": {
-				"currentConversation": "9a97"
-			},
-			"fighter": {
-				"currentConversation": "134f"
-			}
-		},
 		moving: false
 	};
 
@@ -73,10 +62,8 @@ export default class Map extends Component {
 		} else if (code === 32) {
 			let character = this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].character;
 			if (character) {
-				let conversationURL = "/conversation/" + this.state.characters[character].currentConversation;
-				if (conversationURL) {
-					route(conversationURL);
-				}
+				let conversationURL = "/conversation/" + character + "/";
+				route(conversationURL);
 			}
 		}
 
