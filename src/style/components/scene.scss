@@ -120,12 +120,14 @@
 	}
 
 	&__logo {
+		$logo-width: 606px;
+		$logo-height: 387px;
 		position: absolute;
-		width: 643px;
-		height: 417px;
+		width: $logo-width;
+		height: $logo-height;
 		top: 50px;
 		left: 50%;
-		margin-left: -(643px/2);
+		margin-left: -($logo-width/2);
 		background-image: url("/assets/images/logo.png");
 	}
 
