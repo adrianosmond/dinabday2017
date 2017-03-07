@@ -1,4 +1,6 @@
 .scene {
+	$enter-duration: 2s;
+
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -9,8 +11,7 @@
 	background-position: left top;
 	font-family: "Press Start 2P";
 	font-size: 24px;
-
-	$enter-duration: 2s;
+	transition: opacity $enter-duration 0.5s;
 
 	&:after {
 		content: "";
@@ -29,13 +30,19 @@
 		}
 	}
 
+	&--dark {
+		opacity: 0;
+		transition: opacity $enter-duration 0s;
+	}
+
 	&__bg {
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		background-size: cover;
+		background-position-y: bottom;
 		transition: transform $enter-duration;
 
 		&--2 {
@@ -65,6 +72,61 @@
 				transform: translateY(50%);
 			}
 		}
+
+		&--parallax {
+			background-size: contain;
+			background-repeat: repeat-x;
+			// width: 200%;
+
+			&.scene__bg {
+				&:after {
+					content: "";
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					left: 100%;
+					bottom: 0;
+					background-image: inherit;
+					background-size: contain;
+					background-position-y: bottom;
+					background-repeat: repeat-x;
+				}
+				&--2 {
+					animation: bg-parallax 256s linear infinite;
+				}
+
+				&--3 {
+					animation: bg-parallax 128s linear infinite;
+				}
+
+				&--4 {
+					animation: bg-parallax 64s linear infinite;
+				}
+
+				&--5 {
+					animation: bg-parallax 32s linear infinite;
+				}
+				@keyframes bg-parallax {
+					0% {
+						transform: translateX(0);
+					}
+					100% {
+						transform: translateX(-100%);
+					}
+				}
+
+			}
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		width: 643px;
+		height: 417px;
+		top: 50px;
+		left: 50%;
+		margin-left: -(643px/2);
+		background-image: url("/assets/images/logo.png");
 	}
 
 	&__people {
@@ -80,7 +142,7 @@
 			transform: translateY(500px);
 		}
 
-		&--fight {
+		&--wide {
 			width: 1000px;
 		}		
 	}
@@ -108,6 +170,17 @@
 			width: $dina-width;
 			height: $dina-height;
 			background-image: url("/assets/images/dina.png");
+			// background-position: 2 * $dina-width;
+			animation: dina-walk 0.75s steps(2) infinite;
+
+			@keyframes dina-walk {
+				0% {
+					background-position: $dina-width;
+				}
+				100% {
+					background-position: 3 * $dina-width;
+				}
+			}
 		}
 
 		&--wizard {
@@ -274,8 +347,27 @@
 		width: 1000px;
 		top: 50px;
 		left: 50%;
-		margin-left: -350px;
+		margin-left: -500px;
 		color: #fff;
+		text-align: center;
+
+		&--bottom {
+			top: auto;
+			bottom: 50px;
+		}
+
+		&--blink {
+			animation: blink 2s step-end infinite;
+
+			@keyframes blink {
+				0%, 100% {
+					visibility: visible;
+				}
+				50% {
+					visibility: hidden;
+				}
+			}
+		}
 	}
 
 	&__input {

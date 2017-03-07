@@ -10,7 +10,7 @@
 				"line" : "...I'm afraid not",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "haveQuest",
 				"line" : "Gin! Got any gin?",
@@ -25,7 +25,7 @@
 				"line" : "Sorry.",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "knowAboutMap",
 				"line" : "Are you Frank?",
@@ -149,7 +149,7 @@
 						"linkTo": "/fight/"
 					},{
 						"text": "No thanks.",
-						"linkTo": "/"
+						"linkTo": "/map/"
 					}]
 				}
 			}, {
@@ -175,7 +175,7 @@
 						"linkTo": "/fight/"
 					},{
 						"text": "No thanks.",
-						"linkTo": "/"
+						"linkTo": "/map/"
 					}]
 				}
 			}, {
@@ -231,7 +231,7 @@
 						"linkTo": "/fight/"
 					},{
 						"text": "No thanks.",
-						"linkTo": "/"
+						"linkTo": "/map/"
 					}]
 				}
 			}, {
@@ -248,7 +248,7 @@
 				"line" : "That'll lead you to the map...",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "haveMap",
 				"line" : "You want a piece of me?",
@@ -257,7 +257,7 @@
 				"line" : "...Probably not",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			} ]
 		},
 		"pirate" : {
@@ -272,7 +272,7 @@
 				"line" : "Are you sure you're here to see me?",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "haveQuest",
 				"line" : "Aaarrrrr!",
@@ -398,7 +398,7 @@
 				"line" : "Just go find Frank and get the map back...",
 				"person" : 1
 			}, {
-				"linkTo" : "/",
+				"linkTo" : "/map/",
 				"setState" : "knowAboutMap"
 			}, {
 				"id" : "knowAboutMap",
@@ -432,7 +432,7 @@
 				"line" : "Sure. See you soon.",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "mapMissing",
 				"line" : "Have you got my map yet?",
@@ -453,7 +453,7 @@
 				"line" : "If only he did...",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "findingName",
 				"line" : "Do you know 'The Big Bastard'?",
@@ -489,7 +489,7 @@
 				"line" : "I think the other was Lerwick.",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "wonFight",
 				"line" : "Do you have the map yet?",
@@ -504,7 +504,7 @@
 				"line" : "Wow. Rather you than me!",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "haveMap",
 				"line" : "I've got it!",
@@ -522,7 +522,7 @@
 				"line" : "Let's go!",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			} ]
 		},
 		"wizard" : {
@@ -636,7 +636,7 @@
 				"line" : "Alright then. I guess I'll go on a birthday quest.",
 				"person" : 1
 			}, {
-				"linkTo" : "/",
+				"linkTo" : "/map/",
 				"setState" : "haveQuest"
 			}, {
 				"id" : "haveQuest",
@@ -652,7 +652,7 @@
 				"line" : "It's just south of here...",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "knowAboutMap",
 				"line" : "Did you meet Steve the pirate yet?",
@@ -679,7 +679,7 @@
 				"line" : "...",
 				"person" : 1
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "mapMissing",
 				"line" : "You're still here",
@@ -755,7 +755,7 @@
 				"line" : "Perhaps go check with them.",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "findingName",
 				"line" : "Can you remember the Big Bastard's name yet?",
@@ -776,7 +776,7 @@
 				"line" : "Steve and Frank might remember more fullly.",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "wonFight",
 				"line" : "I remember now!",
@@ -791,7 +791,7 @@
 				"line" : "Thanks",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			}, {
 				"id" : "haveMap",
 				"line" : "It looks like you have a map!",
@@ -803,7 +803,7 @@
 				"line" : "Go speak to Steve!",
 				"person" : 2
 			}, {
-				"linkTo" : "/"
+				"linkTo" : "/map/"
 			} ]
 		}
 	},

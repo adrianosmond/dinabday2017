@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
+import StartScreen from './startscreen';
 import Map from './map';
 import Conversation from './conversation';
 import Fight from './fight';
@@ -19,7 +20,8 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<Router onChange={this.handleRoute}>
-					<Map path="/" />
+					<StartScreen path="/" />
+					<Map path="/map/" />
 					<Conversation path="/conversation/:conversationId" />
 					<Fight path="/fight/" />
 				</Router>

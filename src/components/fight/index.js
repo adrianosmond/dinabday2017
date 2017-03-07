@@ -101,7 +101,7 @@ export default class Fight extends Component {
 			if (this.state.won) {
 				route("/conversation/fighter/");
 			} else {
-				route("/");
+				route("/map/");
 			}
 		}, 2200);
 	}
@@ -172,7 +172,7 @@ export default class Fight extends Component {
 				<div class="scene__instruction">
 					<label>Shout out: <input type="text" id="shout-out" class="scene__input" disabled={!this.state.decided}/></label>
 				</div>
-				<div class="scene__people scene__people--fight">
+				<div class="scene__people scene__people--wide">
 					<div class={'scene__person scene__person--brute'
 						+ (this.state.brutePunched? ' scene__person--brute-punching' : '')
 						+ (this.state.bruteLookBack ? ' scene__person--brute-look-back' : '')}></div>
