@@ -46,11 +46,11 @@ export default class Fight extends Component {
 			this.setState({
 				won: true
 			});
+			firebase.database().ref("conversations/currentState").set("wonFight");
 		}
 	}
 
 	inputKeyListener(e) {
-		console.log(e.target.value);
 		if (!this.state.brutePunched && !this.moreShoutsBlocked) {
 			if (e.keyCode === 13) {
 				let val = e.target.value.trim().toLowerCase();
@@ -170,7 +170,7 @@ export default class Fight extends Component {
 				<div class="scene__bg scene__bg--4"></div>
 				<div class="scene__bg scene__bg--5"></div>
 				<div class="scene__instruction">
-					<label>Shout out: <input type="text" id="shout-out" class="scene__input" disabled={!this.state.decided}/></label>
+					<label>Shout out: <input type="text" id="shout-out" class="pixel-input" disabled={!this.state.decided}/></label>
 				</div>
 				<div class="scene__people scene__people--wide">
 					<div class={'scene__person scene__person--brute'

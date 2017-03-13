@@ -9,8 +9,6 @@
 	background-image: url("/assets/images/landscape-1.jpg");
 	background-size: cover;
 	background-position: left top;
-	font-family: "Press Start 2P";
-	font-size: 24px;
 	transition: opacity $enter-duration 0.5s;
 
 	&:after {
@@ -372,15 +370,5 @@
 				}
 			}
 		}
-	}
-
-	&__input {
-		appearance: none;
-		border: 0;
-		border-bottom: 4px solid #fff;
-		font: inherit;
-		color: inherit;
-		background-color: transparent;
-		outline: 0;
 	}
 }

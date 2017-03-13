@@ -14,13 +14,15 @@ export default class Map extends Component {
 
 	componentWillMount() {
 		let ref = firebase.database().ref("map").once("value", (result) => {
+			let map = result.val();
+			let hideFog = map.inventory && map.inventory.map;
 			this.setState({
-				map: result.val(),
+				map: map,
+				hideFog: hideFog
 			});
 
 			setTimeout(() => {
 				this.setState({
-					map: result.val(),
 					loading: false
 				});
 			}, 100)
@@ -93,17 +95,49 @@ export default class Map extends Component {
 		}
 	}
 
-	neighbouring(potentialNeighbour, current) {
-		return potentialNeighbour === current
-				|| potentialNeighbour + 1 === current
-				|| potentialNeighbour - 1 === current
-				|| potentialNeighbour + 2 === current
-				|| potentialNeighbour - 2 === current;
+	neighbouring(potentialNeighbour, current, haveMap) {
+		if (haveMap) {
+			return potentialNeighbour === current
+					|| potentialNeighbour + 1 === current
+					|| potentialNeighbour - 1 === current;
+		} else {
+			return potentialNeighbour === current
+					|| potentialNeighbour + 1 === current
+					|| potentialNeighbour - 1 === current
+					|| potentialNeighbour + 2 === current
+					|| potentialNeighbour - 2 === current;
+		}
 	}
 
-	cellVisible(rowIdx, colIdx) {
-		return this.neighbouring(rowIdx, this.state.map.currentPosition.y) &&
-			this.neighbouring(colIdx, this.state.map.currentPosition.x);
+	cellVisible(rowIdx, colIdx, haveMap) {
+		let visibleThroughProximity = this.neighbouring(rowIdx, this.state.map.currentPosition.y, haveMap) &&
+			this.neighbouring(colIdx, this.state.map.currentPosition.x, haveMap);
+
+		let seenPreviously = false;
+
+		if (haveMap) {
+			
+			seenPreviously = this.state.map.rows[rowIdx].cols[colIdx].seen;
+
+			
+			if (visibleThroughProximity) {
+				if (!seenPreviously) {
+					let newMap = JSON.parse(JSON.stringify(this.state.map));
+					newMap.rows[rowIdx].cols[colIdx].seen = true;
+
+					console.log("SEEN ", rowIdx, colIdx);
+					this.setState({
+						map: newMap
+					});
+				}
+			}
+		}
+
+
+		if (seenPreviously) {
+			console.log("--seen ", rowIdx, colIdx);
+		}
+		return visibleThroughProximity || seenPreviously;
 	}
 
 	character(id) {
@@ -158,16 +192,18 @@ export default class Map extends Component {
 	render() {
 		return (
 			<div class={'map' + (this.state.loading? ' map--loading' : '')}>
-				<div class="map__fog"></div>
+				<div class={'map__fog' + ( this.state.hideFog ? ' map__fog--hidden' : '')}></div>
 				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '') + (' map__avatar--height-' + this.cellHeight())}></div>
 				<div class="map__inner" style={this.mapTransform()}>
 					{this.state.map.rows.map((row, rowIdx) => {
 						return (
 							<div class="map__row">
 							{row.cols.map((cell, colIdx) => {
+								let vis = this.cellVisible(rowIdx, colIdx, this.state.hideFog);
+
 								return (
-									<div class={'map__cell map__cell--height-' + cell.height + (!this.cellVisible(rowIdx, colIdx) ? ' map__cell--hidden': '') }>
-										{(this.cellVisible(rowIdx, colIdx) && cell.character ? this.character(cell.character) : '')}
+									<div class={'map__cell map__cell--height-' + cell.height + (!vis ? ' map__cell--hidden': '') }>
+										{(vis && cell.character ? this.character(cell.character) : '')}
 									</div>
 								);
 							})}

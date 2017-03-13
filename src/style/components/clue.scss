@@ -1,0 +1,36 @@
+.clue {
+	position: relative;
+	height:  100vh;
+	background-image: url('/assets/images/parchment.png');
+	image-rendering: pixelated;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	opacity: 0;
+	transition: opacity 1s;
+	color: #666;
+
+	&--loaded {
+		opacity: 1;
+	}
+
+	&__clue-image {
+		height: 100%;
+		image-rendering: pixelated;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		&--wonFight {
+			background-image: url('/assets/images/wonFight.png');
+		}
+	}
+
+	&__input-wrapper {
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		width: 550px;
+		margin-left: -275px;
+	}
+}

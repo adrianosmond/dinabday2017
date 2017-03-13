@@ -245,13 +245,13 @@
         "line" : "You did!",
         "person" : 1
       }, {
-        "line" : "Here's my notes",
-        "person" : 1
+        "line" : "Here are my notes",
+        "person" : 2
       }, {
         "line" : "That'll lead you to the map...",
-        "person" : 1
+        "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "linkTo" : "/clue/"
       }, {
         "id" : "haveMap",
         "line" : "You want a piece of me?",
@@ -517,10 +517,10 @@
         "person" : 1
       }, {
         "line" : "Sure!",
-        "person" : 1
+        "person" : 2
       }, {
         "line" : "Let's go!",
-        "person" : 1
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       } ]

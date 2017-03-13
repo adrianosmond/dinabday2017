@@ -30,7 +30,6 @@
 	}
 
 	&__fog {
-		// visibility: hidden;
 		pointer-events: none;
 		$cells-to-cover: 20;
 		$cells-to-show: 5;
@@ -45,6 +44,10 @@
 		transform: rotateX(55deg) scale(3);
 		box-shadow: rgba(#333, 1) 0 0 30px 40px inset;
 		z-index: 2;
+
+		&--hidden {
+			visibility: hidden;
+		}
 	}
 
 	&__row {

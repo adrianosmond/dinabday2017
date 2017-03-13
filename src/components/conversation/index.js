@@ -12,13 +12,13 @@ export default class Conversation extends Component {
 
 	componentWillMount() {
 		let cid = this.props.conversationId;
-		console.log(cid);
 
 		if (cid) {
 			let ref = firebase.database().ref("conversations").once("value", (result) => {
 				let conversationData = result.val()[cid];
 				let stateId = result.val()["currentState"];
 
+				conversationData.stateId = stateId;
 				conversationData.position = conversationData.scene.findIndex((line) => {
 					return line.id && line.id === stateId;
 				});
@@ -110,7 +110,8 @@ export default class Conversation extends Component {
 			<div class="scene__people">
 				<div class="scene__person scene__person--dina"></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
-				<div class={'scene__person scene__person--' + this.props.conversationId}></div>
+				<div class={'scene__person scene__person--' + this.props.conversationId + 
+					(this.props.conversationId === 'fighter' && this.state.stateId === 'wonFight' ? ' scene__person--fighter-won' : '')}></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.props.conversationId) : '' }
 			</div>
 		);

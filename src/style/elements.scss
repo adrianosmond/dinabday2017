@@ -1,9 +1,20 @@
 @import 'helpers';
 
 body {
-	font-family: sans-serif;
-	line-height: 1.4;
 	background-color: #333333;
 	color: #FFFFFF;
-	overflow: hidden
+	font-family: "Press Start 2P";
+	font-size: 24px;
+	line-height: 1.4;
+	overflow: hidden;
+}
+
+.pixel-input {
+	appearance: none;
+	border: 0;
+	border-bottom: 4px solid currentColor;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	outline: 0;
 }

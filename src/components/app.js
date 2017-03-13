@@ -5,6 +5,7 @@ import StartScreen from './startscreen';
 import Map from './map';
 import Conversation from './conversation';
 import Fight from './fight';
+import Clue from './clue';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -22,6 +23,7 @@ export default class App extends Component {
 				<Router onChange={this.handleRoute}>
 					<StartScreen path="/" />
 					<Map path="/map/" />
+					<Clue path="/clue/" />
 					<Conversation path="/conversation/:conversationId" />
 					<Fight path="/fight/" />
 				</Router>
