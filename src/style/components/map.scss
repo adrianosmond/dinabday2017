@@ -45,7 +45,7 @@
 		box-shadow: rgba(#333, 1) 0 0 30px 40px inset;
 		z-index: 2;
 
-		&--hidden {
+		.map--remember & {
 			visibility: hidden;
 		}
 	}
@@ -63,8 +63,12 @@
 		font-size: 10px;
 		line-height: 1;
 
+		.map--remember & {
+			transition: opacity $cell-move-time / 2;
+		}
+
 		&--hidden {
-			visibility: hidden;
+			opacity: 0;
 		}
 
 		&--height {

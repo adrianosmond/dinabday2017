@@ -6,6 +6,7 @@ import Map from './map';
 import Conversation from './conversation';
 import Fight from './fight';
 import Clue from './clue';
+import Travel from './travel';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -26,6 +27,7 @@ export default class App extends Component {
 					<Clue path="/clue/" />
 					<Conversation path="/conversation/:conversationId" />
 					<Fight path="/fight/" />
+					<Travel path="/travel/" />
 				</Router>
 			</div>
 		);

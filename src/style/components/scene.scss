@@ -22,6 +22,12 @@
 		transition: transform $enter-duration;
 	}
 
+	&--sea {
+		&:after {
+			content: none;
+		}
+	}
+
 	&--not-started {
 		&:after {
 			transform: translateY(500px);
@@ -71,6 +77,12 @@
 			}
 		}
 
+		&--waves {
+			background-image: url("/assets/images/waves.png");
+			height: 32px;
+			image-rendering: pixelated;
+		}
+
 		&--parallax {
 			background-size: contain;
 			background-repeat: repeat-x;
@@ -101,7 +113,8 @@
 					animation: bg-parallax 64s linear infinite;
 				}
 
-				&--5 {
+				&--5,
+				&--waves {
 					animation: bg-parallax 32s linear infinite;
 				}
 				@keyframes bg-parallax {
@@ -116,6 +129,51 @@
 			}
 		}
 	}
+
+	&__ship {
+		$ship-multiplier: 2;
+		$ship-width: 138px;
+		$ship-height: 141px;
+		width: $ship-multiplier * $ship-width;
+		height: $ship-multiplier * $ship-height;
+		background-image: url("/assets/images/sailing-ship.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		image-rendering: pixelated;
+		position: absolute;
+		left: 45vw;
+		bottom: 0;
+		animation: ship-glide 10s linear;
+		animation-fill-mode: forwards;
+		@keyframes ship-glide {
+			0% {
+				transform: translateX(-50%)
+			}
+			100% {
+				transform: translateX(calc(-50% + 10vw));
+			}
+		}
+
+		&-wrapper {
+			width: 100%;
+			animation: ship-bobble 1s linear infinite;
+			@keyframes ship-bobble {
+				0% {
+					transform: translateY(0);
+				}
+				25% {
+					transform: translateY(-3px);
+				}
+				75% {
+					transform: translateY(3px);
+				}
+				100% {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
 
 	&__logo {
 		$logo-width: 606px;

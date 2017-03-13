@@ -34,7 +34,7 @@ export default class Map extends Component {
 	}
 
 	componentWillUnmount() {
-		firebase.database().ref("map/currentPosition").set(this.state.map.currentPosition);
+		firebase.database().ref("map").set(this.state.map);
 		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
@@ -191,8 +191,8 @@ export default class Map extends Component {
 
 	render() {
 		return (
-			<div class={'map' + (this.state.loading? ' map--loading' : '')}>
-				<div class={'map__fog' + ( this.state.hideFog ? ' map__fog--hidden' : '')}></div>
+			<div class={'map' + (this.state.loading? ' map--loading' : '') + (this.state.hideFog? ' map--remember' : '')}>
+				<div class="map__fog"></div>
 				<div class={"map__avatar" + (this.state.moving? ' map__avatar--walking' : '') + (' map__avatar--height-' + this.cellHeight())}></div>
 				<div class="map__inner" style={this.mapTransform()}>
 					{this.state.map.rows.map((row, rowIdx) => {
