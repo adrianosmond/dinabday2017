@@ -9,9 +9,11 @@
 	perspective: 650px;
 	transform-style: preserve-3d;
 	overflow: hidden;
+	transition: opacity 1s;
+	opacity: 1;
 
 	&--loading {
-		visibility: hidden;
+		opacity: 0;
 	}
 
 	&__inner {

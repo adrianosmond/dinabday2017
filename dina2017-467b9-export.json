@@ -193,7 +193,7 @@
         "person" : 2
       }, {
         "line" : "I'll take him ths time",
-        "person" : 1
+        "person" : 2
       }, {
         "line" : "Do you know what his name is?",
         "person" : 1
@@ -207,7 +207,10 @@
         "line" : "All I know now",
         "person" : 2
       }, {
-        "line" : "Is that I'm never gonna give you up.",
+        "line" : "Is that I'm...",
+        "person" : 2
+      }, {
+        "line" : "...I'm never gonna give you up.",
         "person" : 2
       }, {
         "line" : "But I think you can scratch that from his name.",
@@ -475,9 +478,6 @@
         "person" : 2
       }, {
         "line" : "Those were simpler times.",
-        "person" : 2
-      }, {
-        "line" : "And when I ran a postal ship.",
         "person" : 2
       }, {
         "line" : "I remember he wanted nothing to do with a couple of postal codes",
@@ -748,7 +748,7 @@
         "line" : "The main actor. That's a good place to start.",
         "person" : 2
       }, {
-        "line" : "Steve and Frank might remember more fullly.",
+        "line" : "Steve and Frank might remember more fully.",
         "person" : 2
       }, {
         "line" : "Perhaps go check with them.",

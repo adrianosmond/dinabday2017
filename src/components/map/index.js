@@ -62,8 +62,15 @@ export default class Map extends Component {
 		} else if (code === 32) {
 			let character = this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].character;
 			if (character) {
-				let conversationURL = "/conversation/" + character + "/";
-				route(conversationURL);
+
+				this.setState({
+					loading: true
+				});
+
+				setTimeout(() => {
+					let conversationURL = "/conversation/" + character + "/";
+					route(conversationURL);
+				}, 1000);
 			}
 		}
 
