@@ -6,7 +6,8 @@ export default class Conversation extends Component {
 		scene: [],
 		position: 0,
 		started: false,
-		decided: false
+		decided: false,
+		ignoreKeys: true
 	}
 
 	componentWillMount() {
@@ -22,8 +23,6 @@ export default class Conversation extends Component {
 					return line.id && line.id === stateId;
 				});
 
-				console.log(conversationData);
-
 				this.setState(conversationData);
 
 				setTimeout(() => {
@@ -31,6 +30,12 @@ export default class Conversation extends Component {
 						started: true
 					});
 				}, 200);
+
+				setTimeout(() => {
+					this.setState({
+						ignoreKeys: false
+					});
+				}, 2200);
 			});
 		}
 		this.boundKeyListener = this.keylistener.bind(this)
@@ -44,7 +49,8 @@ export default class Conversation extends Component {
 	linkSomewhere(linkTo) {
 		this.setState({
 			decided: true,
-			started: false
+			started: false,
+			ignoreKeys: true
 		});
 		setTimeout(() => {
 			route(linkTo);
@@ -52,6 +58,10 @@ export default class Conversation extends Component {
 	}
 
 	keylistener(e) {
+		if (this.state.ignoreKeys) {
+			return;
+		}
+
 		let code = e.keyCode;
 
 		if (this.state.scene[this.state.position].decision) {
