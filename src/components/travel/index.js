@@ -13,9 +13,13 @@ export default class Travel extends Component {
 			});
 
 			//hide old ship x,y -> 11,10
+			firebase.database().ref("map/rows/10/cols/11/character").set(null);
 			//hide old pirate x,y -> 12, 10
+			firebase.database().ref("map/rows/10/cols/12/character").set(null);
 			//move ship x,y -> 11,19
+			firebase.database().ref("map/rows/19/cols/11/character").set("ship");
 			//move dina x,y -> 10,19
+			firebase.database().ref("map/currentPosition").set({x: 10, y: 19});
 
 		}, 200);
 
