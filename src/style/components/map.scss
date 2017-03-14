@@ -63,9 +63,9 @@
 		font-size: 10px;
 		line-height: 1;
 
-		.map--remember & {
-			transition: opacity $cell-move-time / 2;
-		}
+		// .map--remember & {
+		// 	transition: opacity $cell-move-time / 2;
+		// }
 
 		&--hidden {
 			opacity: 0;

@@ -200,9 +200,14 @@
 			transform: translateY(500px);
 		}
 
-		&--wide {
+		&--wide, 
+		&--race {
 			width: 1000px;
-		}		
+		}
+
+		&--race {
+			justify-content: center;
+		}
 	}
 
 	$dina-width: 88px;
@@ -213,6 +218,10 @@
 	$pirate-height: 208px;
 	$brute-width: 584px;
 	$brute-height: 352px;
+	$levendig-width: 104px;
+	$levendig-height: 192px;
+	$dina-with-chocolate-width: 192px;
+	$dina-with-chocolate-height: 256px;
 	$fighter-width: 344px;
 	$fighter-height: 272px;
 	$fighter-frames: 5;
@@ -224,13 +233,38 @@
 		background-position: top left;
 		image-rendering: pixelated;
 
+
+		&-wrapper {
+
+			&--walking {
+				animation: person-bobble 0.75s ease infinite;
+			}
+
+			&--running {
+				animation: person-bobble 0.4s ease infinite;
+			}
+			@keyframes person-bobble {
+				0%, 50%, 100% {
+					transform: translateY(0);
+				}
+
+				25%, 75% {
+					transform: translateY(-3px);
+				}
+			}
+		}
+
 		&--dina {
 			width: $dina-width;
 			height: $dina-height;
 			background-image: url("/assets/images/dina.png");
 
-			&-walking {
+			.scene__person-wrapper--walking & {
 				animation: dina-walk 0.75s steps(2) infinite;
+			}
+
+			.scene__person-wrapper--running & {
+				animation: dina-walk 0.4s steps(2) infinite;
 			}
 
 			@keyframes dina-walk {
@@ -239,6 +273,52 @@
 				}
 				100% {
 					background-position: 3 * $dina-width;
+				}
+			}
+		}
+
+		&--levendig {
+			width: $levendig-width;
+			height: $levendig-height;
+			background-image: url("/assets/images/levendig.png");
+
+			.scene__person-wrapper--walking & {
+				animation: levendig-walk 0.75s steps(2) infinite;
+			}
+
+			.scene__person-wrapper--running & {
+				animation: levendig-walk 0.4s steps(2) infinite;
+			}
+
+			@keyframes levendig-walk {
+				0% {
+					background-position: $levendig-width;
+				}
+				100% {
+					background-position: 3 * $levendig-width;
+				}
+			}
+		}
+
+		&--dina-with-chocolate {
+			width: $dina-with-chocolate-width;
+			height: $dina-with-chocolate-height;
+			background-image: url("/assets/images/dina-with-chocolate.png");
+
+			.scene__person-wrapper--walking & {
+				animation: dina-with-chocolate-walk 0.75s steps(2) infinite;
+			}
+
+			.scene__person-wrapper--running & {
+				animation: dina-with-chocolate-walk 0.4s steps(2) infinite;
+			}
+
+			@keyframes dina-with-chocolate-walk {
+				0% {
+					background-position: $dina-with-chocolate-width;
+				}
+				100% {
+					background-position: 3 * $dina-with-chocolate-width;
 				}
 			}
 		}
@@ -428,5 +508,21 @@
 				}
 			}
 		}
+	}
+
+	&__race-bar-wrapper {
+		position: absolute;
+		top: 25px;
+		left: 50%;
+		width: 500px;
+		margin-left: -250px;
+
+	}
+
+	&__race-timer {
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		font-size: 60px;
 	}
 }

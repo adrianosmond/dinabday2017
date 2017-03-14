@@ -19,6 +19,16 @@
 		background-image: url("/assets/images/pirate.png");
 	}
 
+
+	$envelope-width: 15px;
+	$envelope-height: 12px;
+	&--envelope {
+		width: $envelope-width * $multiplier;
+		height: $envelope-height * (3 * $multiplier);
+		margin-left: -$envelope-width / 2 * $multiplier;
+		background-image: url("/assets/images/envelope.png");
+	}
+
 	$fighter-width: 43px;
 	$fighter-height: 34px;
 	$fighter-frames: 5;

@@ -812,6 +812,9 @@
       "x" : 11,
       "y" : 2
     },
+    "inventory": {
+    	"map": false
+    },
     "rows" : [ {
       "cols" : [ {
         "height" : 0
@@ -1482,7 +1485,8 @@
       }, {
         "height" : 2
       }, {
-        "height" : 2
+        "height" : 2,
+        "character": "envelope"
       }, {
         "height" : 3
       }, {
