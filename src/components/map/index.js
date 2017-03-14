@@ -116,16 +116,15 @@ export default class Map extends Component {
 		let seenPreviously = false;
 
 		if (haveMap) {
-			
+
 			seenPreviously = this.state.map.rows[rowIdx].cols[colIdx].seen;
 
-			
+
 			if (visibleThroughProximity) {
 				if (!seenPreviously) {
 					let newMap = JSON.parse(JSON.stringify(this.state.map));
 					newMap.rows[rowIdx].cols[colIdx].seen = true;
 
-					console.log("SEEN ", rowIdx, colIdx);
 					this.setState({
 						map: newMap
 					});
@@ -133,10 +132,6 @@ export default class Map extends Component {
 			}
 		}
 
-
-		if (seenPreviously) {
-			console.log("--seen ", rowIdx, colIdx);
-		}
 		return visibleThroughProximity || seenPreviously;
 	}
 
