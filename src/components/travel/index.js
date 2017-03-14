@@ -11,6 +11,12 @@ export default class Travel extends Component {
 			this.setState({
 				started: true
 			});
+
+			//hide old ship x,y -> 11,10
+			//hide old pirate x,y -> 12, 10
+			//move ship x,y -> 11,19
+			//move dina x,y -> 10,19
+
 		}, 200);
 
 		setTimeout(() => {
