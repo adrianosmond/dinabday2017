@@ -76,6 +76,16 @@
 				transform: translateY(50%);
 			}
 		}
+		
+		&--6 {
+			bottom: 25px;
+			left: auto;
+			right: 0;
+			background-image: url("/assets/images/mountain-start.png");
+			.scene--not-started & {
+				transform: translateY(60%);
+			}
+		}
 
 		&--waves {
 			background-image: url("/assets/images/waves.png");
