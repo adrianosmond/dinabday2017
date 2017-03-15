@@ -12,13 +12,18 @@ export default class Race extends Component {
 
 		setTimeout(() => {
 			this.setState({
-				started: true,
-				power: 0,
-				difference: 0,
-				timer: 30,
-				chocolate: false
+				started: true
 			});
 		}, 200);
+
+		this.setState({
+			power: 0,
+			difference: 0,
+			timer: 30,
+			endTime: new Date().getTime() + 30000,
+			chocolate: true,
+
+		});
 
 		this.raceInterval = setInterval(this.updateRaceState.bind(this), 100);
 		this.timerInterval = setInterval(this.updateTimerState.bind(this), 1000);
@@ -87,6 +92,12 @@ export default class Race extends Component {
 			newDifference += Math.max(5, 100 - power);
 		} else {
 			newDifference -= Math.min(5, threshold - power);
+		}
+
+		if (!this.state.chocolate) {
+			let timeToEnd = this.state.endTime - new Date().getTime();
+			let maxProgress = (timeToEnd - 2000) / 10;
+			newDifference = Math.min(499, maxProgress, newDifference);
 		}
 
 		if (Math.abs(newDifference) > 500) {
