@@ -15,6 +15,7 @@ export default class Mountain extends Component {
 
 		this.boundKeyListener = this.keylistener.bind(this)
 		document.addEventListener("keyup", this.boundKeyListener);
+		window.sessionStorage.setItem("seen-a-mountain", "true");
 	}
 
 	componentWillUnmount() {

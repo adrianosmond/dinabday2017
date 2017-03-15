@@ -18,6 +18,7 @@ export default class Map extends Component {
 			let hideFog = map.inventory && map.inventory.map;
 			this.setState({
 				map: map,
+				knowAboutMountains: window.sessionStorage.getItem("seen-a-mountain") === "true",
 				hideFog: hideFog
 			});
 
@@ -39,7 +40,7 @@ export default class Map extends Component {
 	}
 
 	keylistener(e) {
-		if (blockKeys || this.state.map.rows.length === 0) return;
+		if (blockKeys || this.state.map.rows.length === 0 || this.state.loading) return;
 
 		let moved = false;
 		let code = e.keyCode;
@@ -161,6 +162,15 @@ export default class Map extends Component {
 	}
 
 	terrainPassable(height) {
+		if (height===3 && !this.state.knowAboutMountains) {
+			this.setState({
+				loading: true
+			});
+
+			setTimeout(() => {
+				route("/mountain/");
+			}, 1000);
+		}
 		return height > 0 && height < 3;
 	}
 
