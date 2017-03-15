@@ -20,9 +20,11 @@ export default class Race extends Component {
 			power: 0,
 			difference: 0,
 			timer: 30,
-			endTime: new Date().getTime() + 30000,
-			chocolate: true,
+			chocolate: false,
+		});
 
+		this.setState({
+			endTime: new Date().getTime() + (this.state.timer * 1000),
 		});
 
 		this.raceInterval = setInterval(this.updateRaceState.bind(this), 100);
@@ -82,7 +84,7 @@ export default class Race extends Component {
 		let newDifference = this.state.difference;
 		let newBehind = this.state.behind;
 
-		let threshold = 100 - Math.min(5, this.state.timer);
+		let threshold = 95;
 
 		if (this.state.chocolate) {
 			threshold = 80;
