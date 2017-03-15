@@ -96,9 +96,8 @@ export default class Race extends Component {
 
 		if (!this.state.chocolate) {
 			let timeToEnd = this.state.endTime - new Date().getTime();
-			timeToEnd -= 2000;
-			timeToEnd /= 10;
-			newDifference = Math.min(499, timeToEnd, newDifference);
+			let maxProgress = (timeToEnd - 2000) / 10;
+			newDifference = Math.min(499, maxProgress, newDifference);
 		}
 
 		if (Math.abs(newDifference) > 500) {
