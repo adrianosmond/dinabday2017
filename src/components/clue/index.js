@@ -48,6 +48,10 @@ export default class Clue extends Component {
 			} else if (this.state.clueFor === "secondIsland" && val === "adb59e37") {
 				firebase.database().ref("map/inventory/chocolate").set(true);
 				this.leaveClue();
+			} else if (this.state.clueFor === "wonRace" && val === "8b62d517") {
+				firebase.database().ref("conversations/currentState").set("haveBoots");
+				firebase.database().ref("map/inventory/boots").set(true);
+				this.leaveClue();
 			} else {
 				e.target.value = "";
 			}

@@ -10,27 +10,29 @@ export default class Race extends Component {
 		this.boundKeyListener = this.keylistener.bind(this);
 		document.addEventListener("keyup", this.boundKeyListener);
 
-		setTimeout(() => {
+		firebase.database().ref("map/inventory/rod").once("value", (result) => {
+			setTimeout(() => {
+				this.setState({
+					started: true
+				});
+			}, 200);
+
 			this.setState({
-				started: true
+				power: 0,
+				difference: 0,
+				timer: 30,
+				rod: result.val(),
 			});
-		}, 200);
 
-		this.setState({
-			power: 0,
-			difference: 0,
-			timer: 30,
-			chocolate: false,
+			this.setState({
+				endTime: new Date().getTime() + (this.state.timer * 1000),
+			});
+
+			this.raceInterval = setInterval(this.updateRaceState.bind(this), 100);
+			this.timerInterval = setInterval(this.updateTimerState.bind(this), 1000);
+			this.lastTime = new Date().getTime();
+			requestAnimationFrame(this.updateBar.bind(this));
 		});
-
-		this.setState({
-			endTime: new Date().getTime() + (this.state.timer * 1000),
-		});
-
-		this.raceInterval = setInterval(this.updateRaceState.bind(this), 100);
-		this.timerInterval = setInterval(this.updateTimerState.bind(this), 1000);
-		this.lastTime = new Date().getTime();
-		requestAnimationFrame(this.updateBar.bind(this));
 	}
 
 	componentWillUnmount() {
@@ -47,14 +49,22 @@ export default class Race extends Component {
 			started: false
 		});
 
-		setTimeout(() => {
-			route("/map/");
-		}, 2000);
+		if (this.state.difference > 0) {
+			firebase.database().ref("conversations/currentState").set("haveBoots");
+			setTimeout(() => {
+				route("/conversation/levendig/");
+			}, 2000);
+		} else {
+			setTimeout(() => {
+				route("/map/");
+			}, 2000);
+		}
+
 	}
 
 	keylistener(e) {
 		let powerPerKeypress = 10;
-		if (this.state.chocolate) {
+		if (this.state.rod) {
 			powerPerKeypress = 25
 		}
 
@@ -86,7 +96,7 @@ export default class Race extends Component {
 
 		let threshold = 95;
 
-		if (this.state.chocolate) {
+		if (this.state.rod) {
 			threshold = 80;
 		}
 
@@ -96,7 +106,7 @@ export default class Race extends Component {
 			newDifference -= Math.min(5, threshold - power);
 		}
 
-		if (!this.state.chocolate) {
+		if (!this.state.rod) {
 			let timeToEnd = this.state.endTime - new Date().getTime();
 			let maxProgress = (timeToEnd - 2000) / 10;
 			newDifference = Math.min(499, maxProgress, newDifference);
@@ -157,7 +167,7 @@ export default class Race extends Component {
 					</div>
 					<div class="scene__person-wrapper scene__person-wrapper--running">
 						<div style={'transform: translateX(' + this.state.difference + 'px); transition: transform 0.1s;'}>
-							<div class={'scene__person scene__person--dina' + (this.state.chocolate? '-with-chocolate' : '')}></div>
+							<div class={'scene__person scene__person--dina' + (this.state.rod? '-with-chocolate' : '')}></div>
 						</div>
 					</div>
 				</div>

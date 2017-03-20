@@ -655,44 +655,189 @@
     "levendig" : {
       "scene" : [ {
         "id" : "secondIsland",
-        "line" : "...",
+        "line" : "Hey. Do you want to race?",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "Ok then."
+          }, {
+            "linkTo" : "/map/",
+            "text" : "No thanks."
+          } ]
+        }
       }, {
         "id" : "noBoots",
-        "line" : "...",
+        "line" : "Hi!",
+        "person" : 1
+      }, {
+        "line" : "I'm Dina.",
+        "person" : 1
+      }, {
+        "line" : "Hi!",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "line" : "The name's Levendig McBorsten.",
+        "person" : 2
+      }, {
+        "line" : "I'm the best runner on the island!",
+        "person" : 2
+      }, {
+        "line" : "Cool.",
+        "person" : 1
+      }, {
+        "line" : "It's a bit tenuous,",
+        "person" : 1
+      }, {
+        "line" : "But you don't know where I could get some decent shoes do you?",
+        "person" : 1
+      }, {
+        "line" : "I want to cross the mountains",
+        "person" : 1
+      }, {
+        "line" : "And I don't think I can do that in these...",
+        "person" : 1
+      }, {
+        "line" : "Sure. I've got a spare pair around somewhere.",
+        "person" : 2
+      }, {
+        "line" : "You can have them",
+        "person" : 2
+      }, {
+        "line" : "Thanks!",
+        "person" : 1
+      }, {
+        "line" : "No wait, you cut me off.",
+        "person" : 2
+      }, {
+        "line" : "I was saying",
+        "person" : 2
+      }, {
+        "line" : "You can have them",
+        "person" : 2
+      }, {
+        "line" : "If you can beat me in a race",
+        "person" : 2
+      }, {
+        "line" : "Just don't look at my chest while I run.",
+        "person" : 2
+      }, {
+        "line" : "What do you say?",
+        "person" : 2
+      }, {
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "Ok then."
+          }, {
+            "linkTo" : "/map/",
+            "text" : "No thanks."
+          } ]
+        }
       }, {
         "id" : "lostRace",
-        "line" : "...",
+        "line" : "So you're back again...",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "line" : "The offer still stands-",
+        "person" : 2
+      }, {
+        "line" : "Beat me, shoes free",
+        "person" : 2
+      }, {
+        "line" : "You lose, no shoes",
+        "person" : 2
+      }, {
+        "line" : "Think you can take me this time?",
+        "person" : 2
+      }, {
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "You betcha."
+          }, {
+            "linkTo" : "/map/",
+            "text" : "Not just now."
+          } ]
+        }
       }, {
         "id" : "needRod",
-        "line" : "...",
+        "line" : "So you're back again...",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "line" : "The offer still stands-",
+        "person" : 2
+      }, {
+        "line" : "Beat me, shoes free",
+        "person" : 2
+      }, {
+        "line" : "You lose, no shoes",
+        "person" : 2
+      }, {
+        "line" : "Think you can take me this time?",
+        "person" : 2
+      }, {
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "You betcha."
+          }, {
+            "linkTo" : "/map/",
+            "text" : "Not just now."
+          } ]
+        }
       }, {
         "id" : "gotRod",
-        "line" : "...",
+        "line" : "So you're back again...",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "line" : "The offer still stands-",
+        "person" : 2
+      }, {
+        "line" : "Beat me, shoes free",
+        "person" : 2
+      }, {
+        "line" : "You lose, no shoes",
+        "person" : 2
+      }, {
+        "line" : "Think you can take me this time?",
+        "person" : 2
+      }, {
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "You betcha."
+          }, {
+            "linkTo" : "/map/",
+            "text" : "Not just now."
+          } ]
+        }
       }, {
         "id" : "wonRace",
-        "line" : "...",
+        "line" : "Wow! Good running!",
         "person" : 2
       }, {
-        "linkTo" : "/map/"
+        "line" : "I never thought you'd beat me",
+        "person" : 2
+      }, {
+        "line" : "But I guess a deal's a deal",
+        "person" : 2
+      }, {
+        "line" : "You can find the shoes here...",
+        "person" : 2
+      }, {
+        "linkTo" : "/clue/"
       }, {
         "id" : "haveBoots",
-        "line" : "...",
+        "line" : "Nice shoes!",
         "person" : 2
+      }, {
+        "line" : "I thought you were wanting to go hiking over the mountains?",
+        "person" : 2
+      }, {
+        "line" : "Yeah. I guess I should get on that",
+        "person" : 1
       }, {
         "linkTo" : "/map/"
       } ]
@@ -1319,8 +1464,10 @@
       "y" : 2
     },
     "inventory" : {
+      "boots": false,
       "chocolate" : false,
-      "map" : false
+      "map" : false,
+      "rod": false
     },
     "rows" : [ {
       "cols" : [ {
