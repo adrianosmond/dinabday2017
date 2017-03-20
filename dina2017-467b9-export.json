@@ -263,6 +263,96 @@
         "linkTo" : "/map/"
       } ]
     },
+    "fisherman" : {
+      "scene" : [ {
+      	"id": "secondIsland",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "noBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "lostRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "needRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "gotRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "wonRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "haveBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      } ]
+    },,
+    "levendig" : {
+      "scene" : [ {
+      	"id": "secondIsland",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "noBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "lostRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "needRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "gotRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "wonRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "haveBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      } ]
+    },
     "pirate" : {
       "scene" : [ {
         "id" : "preQuest",
@@ -523,6 +613,78 @@
         "person" : 2
       }, {
         "linkTo" : "/travel/"
+      }, {
+      	"id": "secondIsland",
+      	"line": "Here we are!",
+      	"person": 2
+      }, {
+      	"line": "Thanks so much!",
+      	"person": 1
+      }, {
+      	"line": "One more thing...",
+      	"person": 2
+      }, {
+      	"line": "It's dangerous down here",
+      	"person": 2
+      }, {
+      	"line": "I'll give you a map",
+      	"person": 2
+      }, {
+      	"line": "Which you can use to find my emergency supply kit",
+      	"person": 2
+      }, {
+      	"line": "You never know when it might come in handy",
+      	"person": 2
+      }, {
+      	"line": "Thanks!",
+      	"person": 1
+      }, {
+      	"linkTo": "/clue/"
+      } ]
+    },
+    "runner" : {
+      "scene" : [ {
+      	"id": "secondIsland",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "noBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "lostRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "needRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "gotRod",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "wonRace",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
+      	"id": "haveBoots",
+      	"line": "...",
+      	"person": 2
+      }, {
+        "linkTo" : "/map/"
       } ]
     },
     "wizard" : {
@@ -813,7 +975,8 @@
       "y" : 2
     },
     "inventory": {
-    	"map": false
+    	"map": false,
+    	"chocolate": false
     },
     "rows" : [ {
       "cols" : [ {
