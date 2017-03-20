@@ -266,47 +266,363 @@
     "fisherman" : {
       "scene" : [ {
       	"id": "secondIsland",
-      	"line": "...",
+      	"line": "Hi there!",
+      	"person": 1
+      }, {
+      	"line": "I'm Dina",
+      	"person": 1
+      }, {
+      	"line": "Not now...",
+      	"person": 2
+      }, {
+      	"line": "I think I'm close to getting a bite...",
       	"person": 2
       }, {
         "linkTo" : "/map/"
       }, {
       	"id": "noBoots",
-      	"line": "...",
+      	"line": "Hi there!",
+      	"person": 1
+      }, {
+      	"line": "I'm Dina",
+      	"person": 1
+      }, {
+      	"line": "Not now...",
+      	"person": 2
+      }, {
+      	"line": "I think I'm close to getting a bite...",
       	"person": 2
       }, {
         "linkTo" : "/map/"
       }, {
       	"id": "lostRace",
-      	"line": "...",
+      	"line": "Hi there!",
+      	"person": 1
+      }, {
+      	"line": "I'm Dina",
+      	"person": 1
+      }, {
+      	"line": "Not now...",
+      	"person": 2
+      }, {
+      	"line": "I think I'm close to getting a bite...",
       	"person": 2
       }, {
         "linkTo" : "/map/"
       }, {
       	"id": "needRod",
-      	"line": "...",
+      	"line": "Hi there!",
+      	"person": 1
+      }, {
+      	"line": "I'm Dina",
+      	"person": 1
+      }, {
+      	"line": "Hi. I'm Ken.",
+      	"person": 2
+      }, {
+      	"line": "What's up?",
+      	"person": 1
+      }, {
+      	"line": "Not a lot.",
+      	"person": 2
+      }, {
+      	"line": "Just fishing.",
+      	"person": 2
+      }, {
+      	"line": "Fishing?",
+      	"person": 1
+      }, {
+      	"line": "Yup.",
+      	"person": 2
+      }, {
+      	"line": "Fishing.",
+      	"person": 2
+      }, {
+      	"line": "Buuuuut....",
+      	"person": 1
+      }, {
+      	"line": "There isn't any water here.",
+      	"person": 1
+      }, {
+      	"line": "No, I know.",
+      	"person": 2
+      }, {
+      	"line": "But there will be soon.",
+      	"person": 2
+      }, {
+      	"line": "Could I borrow your rod in the mean time?",
+      	"person": 1
+      }, {
+      	"line": "While you wait for the rain...",
+      	"person": 1
+      }, {
+      	"line": "Hmm.",
+      	"person": 2
+      }, {
+      	"line": "I don't think so.",
+      	"person": 2
+      }, {
+      	"line": "I've been waiting a while.",
+      	"person": 2
+      }, {
+      	"line": "So it's got to come soon.",
+      	"person": 2
+      }, {
+      	"line": "When you say the water is coming",
+      	"person": 1
+      }, {
+      	"line": "Do you mean rain?",
+      	"person": 1
+      }, {
+      	"line": "No. I mean I'm sure a river or a lake",
+      	"person": 2
+      }, {
+      	"line": "Will turn up here sooner or later.",
+      	"person": 2
+      }, {
+      	"line": "Why do you think that?",
+      	"person": 1
+      }, {
+      	"line": "Well,",
+      	"person": 2
+      }, {
+      	"line": "Cedric came and sat on my head.",
+      	"person": 2
+      }, {
+      	"line": "And I took it as a sign.",
+      	"person": 2
+      }, {
+      	"line": "I mean,",
+      	"person": 2
+      }, {
+      	"line": "Whoever heard of an aquaphobic swan?",
+      	"person": 2
+      }, {
+      	"line": "It's only a matter of time",
+      	"person": 2
+      }, {
+      	"line": "You know there are loads of lakes on this island, right?",
+      	"person": 1
+      }, {
+      	"line": "Lots of them are really nice.",
+      	"person": 1
+      }, {
+      	"line": "I'm sure Cedric would love them...",
+      	"person": 1
+      }, {
+      	"line": "Hmm",
+      	"person": 2
+      }, {
+      	"line": "I could be tempted",
+      	"person": 2
+      }, {
+      	"line": "So tell me",
+      	"person": 2
+      }, {
+      	"line": "Are there any lakes with [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question2incorrect",
+            "text" : "Question 1 incorrect"
+          }, {
+            "jumpTo" : "question2correct",
+            "text" : "Question 1 correct"
+          }, {
+            "jumpTo" : "question2incorrect",
+            "text" : "Question 1 incorrect"
+          }]
+        }
+      }, {
+      	"id": "question2correct",
+      	"line": "What about [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question3incorrect",
+            "text" : "Question 2 incorrect"
+          }, {
+            "jumpTo" : "question3incorrect",
+            "text" : "Question 2 incorrect"
+          }, {
+            "jumpTo" : "question3correct",
+            "text" : "Question 2 correct"
+          }]
+        }
+      }, {
+      	"id": "question3correct",
+      	"line": "And [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question4incorrect",
+            "text" : "Question 3 incorrect"
+          }, {
+            "jumpTo" : "question4incorrect",
+            "text" : "Question 3 incorrect"
+          }, {
+            "jumpTo" : "question4correct",
+            "text" : "Question 3 correct"
+          }]
+        }
+      }, {
+      	"id": "question4correct",
+      	"line": "Where is the best [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question5correct",
+            "text" : "Question 4 correct"
+          }, {
+            "jumpTo" : "question5incorrect",
+            "text" : "Question 4 incorrect"
+          }, {
+            "jumpTo" : "question5incorrect",
+            "text" : "Question 4 incorrect"
+          }]
+        }
+      }, {
+      	"id": "question5correct",
+      	"line": "Which is the biggest [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question6incorrect",
+            "text" : "Question 5 incorrect"
+          }, {
+            "jumpTo" : "question6correct",
+            "text" : "Question 5 correct"
+          }, {
+            "jumpTo" : "question6incorrect",
+            "text" : "Question 5 incorrect"
+          }]
+        }
+      },  {
+      	"id": "question6correct",
+      	"line": "Where is the best [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "questionscorrect",
+            "text" : "Question 6 correct"
+          }, {
+            "jumpTo" : "questionsincorrect",
+            "text" : "Question 6 incorrect"
+          }, {
+            "jumpTo" : "questionsincorrect",
+            "text" : "Question 6 incorrect"
+          }]
+        }
+      }, {
+      	"id": "question2incorrect",
+      	"line": "What about [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question3incorrect",
+            "text" : "Question 2 incorrect"
+          }, {
+            "jumpTo" : "question3incorrect",
+            "text" : "Question 2 incorrect"
+          }, {
+            "jumpTo" : "question3incorrect",
+            "text" : "Question 2 correct"
+          }]
+        }
+      }, {
+      	"id": "question3incorrect",
+      	"line": "And [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question4incorrect",
+            "text" : "Question 3 incorrect"
+          }, {
+            "jumpTo" : "question4incorrect",
+            "text" : "Question 3 incorrect"
+          }, {
+            "jumpTo" : "question4incorrect",
+            "text" : "Question 3 correct"
+          }]
+        }
+      }, {
+      	"id": "question4incorrect",
+      	"line": "Where is the best [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question5incorrect",
+            "text" : "Question 4 correct"
+          }, {
+            "jumpTo" : "question5incorrect",
+            "text" : "Question 4 incorrect"
+          }, {
+            "jumpTo" : "question5incorrect",
+            "text" : "Question 4 incorrect"
+          }]
+        }
+      }, {
+      	"id": "question5incorrect",
+      	"line": "Which is the biggest [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "question6incorrect",
+            "text" : "Question 5 incorrect"
+          }, {
+            "jumpTo" : "question6incorrect",
+            "text" : "Question 5 correct"
+          }, {
+            "jumpTo" : "question6incorrect",
+            "text" : "Question 5 incorrect"
+          }]
+        }
+      },  {
+      	"id": "question6incorrect",
+      	"line": "Where is the best [QUESTION]?",
+      	"person": 2
+      }, {
+      	"decision" : {
+          "options" : [ {
+            "jumpTo" : "questionsincorrect",
+            "text" : "Question 6 correct"
+          }, {
+            "jumpTo" : "questionsincorrect",
+            "text" : "Question 6 incorrect"
+          }, {
+            "jumpTo" : "questionsincorrect",
+            "text" : "Question 6 incorrect"
+          }]
+        }
+      }, {
+      	"id": "questionsincorrect",
+      	"line": "Hmm. I dunno.",
+      	"person": 2
+      }, {
+      	"line": "I'm not convinced",
+      	"person": 2
+      }, {
+      	"line": "I think I'll stay here for now.",
       	"person": 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "gotRod",
-      	"line": "...",
+      	"id": "answersCorrect",
+      	"line": "",
       	"person": 2
-      }, {
+      },{
         "linkTo" : "/map/"
-      }, {
-      	"id": "wonRace",
-      	"line": "...",
-      	"person": 2
-      }, {
-        "linkTo" : "/map/"
-      }, {
-      	"id": "haveBoots",
-      	"line": "...",
-      	"person": 2
-      }, {
-        "linkTo" : "/map/"
-      } ]
+      }]
     },,
     "levendig" : {
       "scene" : [ {
