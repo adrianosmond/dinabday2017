@@ -401,6 +401,8 @@
       	"line": "It's only a matter of time",
       	"person": 2
       }, {
+      	"id": "failedQuiz",
+      	"setState": "failedQuiz",
       	"line": "You know there are loads of lakes on this island, right?",
       	"person": 1
       }, {
@@ -509,13 +511,13 @@
       }, {
       	"decision" : {
           "options" : [ {
-            "jumpTo" : "questionscorrect",
+            "jumpTo" : "answersCorrect",
             "text" : "Question 6 correct"
           }, {
-            "jumpTo" : "questionsincorrect",
+            "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
           }, {
-            "jumpTo" : "questionsincorrect",
+            "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
           }]
         }
@@ -594,18 +596,18 @@
       }, {
       	"decision" : {
           "options" : [ {
-            "jumpTo" : "questionsincorrect",
+            "jumpTo" : "answersIncorrect",
             "text" : "Question 6 correct"
           }, {
-            "jumpTo" : "questionsincorrect",
+            "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
           }, {
-            "jumpTo" : "questionsincorrect",
+            "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
           }]
         }
       }, {
-      	"id": "questionsincorrect",
+      	"id": "answersIncorrect",
       	"line": "Hmm. I dunno.",
       	"person": 2
       }, {
@@ -618,9 +620,26 @@
         "linkTo" : "/map/"
       }, {
       	"id": "answersCorrect",
-      	"line": "",
+      	"line": "Hmm.",
       	"person": 2
-      },{
+      }, {
+      	"line": "Maybe after all that",
+      	"person": 2
+      }, {
+      	"line": "I might just give up on fishing.",
+      	"person": 2
+      }, {
+      	"line": "Me and Cedric can go bungee jumping instead.",
+      	"person": 2
+      }, {
+      	"line": "Here, you can have my rod.",
+      	"setState": "gotRod",
+      	"person": 2,
+      	"removeCharacter": {
+      		"row": 20,
+      		"col": 6
+      	}
+      }, {
         "linkTo" : "/map/"
       }]
     },,
@@ -2195,7 +2214,8 @@
       }, {
         "height" : 1
       }, {
-        "height" : 1
+        "height" : 1,
+        "character": "runner"
       }, {
         "height" : 0
       }, {
@@ -2233,7 +2253,8 @@
       }, {
         "height" : 3
       }, {
-        "height" : 2
+        "height" : 2,
+        "character": "fisherman"
       }, {
         "height" : 2
       }, {
@@ -2317,7 +2338,8 @@
       }, {
         "height" : 0
       }, {
-        "height" : 2
+        "height" : 2,
+        "character": "levendig"
       }, {
         "height" : 3
       }, {

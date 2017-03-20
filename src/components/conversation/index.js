@@ -91,6 +91,11 @@ export default class Conversation extends Component {
 					firebase.database().ref("conversations/currentState").set(newState);
 				}
 
+				let char = this.state.scene[this.state.position].removeCharacter;
+				if (char && char.row && char.col) {
+					firebase.database().ref("map/rows/" + char.row + "/cols/" + char.col + "/character").set(null);
+				}
+
 				if (this.state.scene[this.state.position].linkTo) {
 					this.linkSomewhere(this.state.scene[this.state.position].linkTo);
 				}
@@ -110,7 +115,7 @@ export default class Conversation extends Component {
 			<div class="scene__people">
 				<div class="scene__person scene__person--dina"></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 1) ? this.bubble("dina") : '' }
-				<div class={'scene__person scene__person--' + this.props.conversationId + 
+				<div class={'scene__person scene__person--' + this.props.conversationId +
 					(this.props.conversationId === 'fighter' && this.state.stateId === 'wonFight' ? ' scene__person--fighter-won' : '')}></div>
 				{ (this.state.scene[this.state.position].person && this.state.scene[this.state.position].person === 2) ? this.bubble(this.props.conversationId) : '' }
 			</div>
