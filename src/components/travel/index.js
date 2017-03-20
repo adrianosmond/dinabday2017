@@ -12,6 +12,7 @@ export default class Travel extends Component {
 				started: true
 			});
 
+			firebase.database().ref("conversations/currentState").set("secondIsland");
 			//hide old ship x,y -> 11,10
 			firebase.database().ref("map/rows/10/cols/11/character").set(null);
 			//hide old pirate x,y -> 12, 10

@@ -45,6 +45,9 @@ export default class Clue extends Component {
 				firebase.database().ref("conversations/currentState").set("haveMap");
 				firebase.database().ref("map/inventory/map").set(true);
 				this.leaveClue();
+			} else if (this.state.clueFor === "secondIsland" && val === "adb59e37") {
+				firebase.database().ref("map/inventory/chocolate").set(true);
+				this.leaveClue();
 			} else {
 				e.target.value = "";
 			}
