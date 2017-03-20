@@ -265,166 +265,166 @@
     },
     "fisherman" : {
       "scene" : [ {
-      	"id": "secondIsland",
-      	"line": "Hi there!",
-      	"person": 1
+        "id" : "secondIsland",
+        "line" : "Hi there!",
+        "person" : 1
       }, {
-      	"line": "I'm Dina",
-      	"person": 1
+        "line" : "I'm Dina",
+        "person" : 1
       }, {
-      	"line": "Not now...",
-      	"person": 2
+        "line" : "Not now...",
+        "person" : 2
       }, {
-      	"line": "I think I'm close to getting a bite...",
-      	"person": 2
-      }, {
-        "linkTo" : "/map/"
-      }, {
-      	"id": "noBoots",
-      	"line": "Hi there!",
-      	"person": 1
-      }, {
-      	"line": "I'm Dina",
-      	"person": 1
-      }, {
-      	"line": "Not now...",
-      	"person": 2
-      }, {
-      	"line": "I think I'm close to getting a bite...",
-      	"person": 2
+        "line" : "I think I'm close to getting a bite...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "lostRace",
-      	"line": "Hi there!",
-      	"person": 1
+        "id" : "noBoots",
+        "line" : "Hi there!",
+        "person" : 1
       }, {
-      	"line": "I'm Dina",
-      	"person": 1
+        "line" : "I'm Dina",
+        "person" : 1
       }, {
-      	"line": "Not now...",
-      	"person": 2
+        "line" : "Not now...",
+        "person" : 2
       }, {
-      	"line": "I think I'm close to getting a bite...",
-      	"person": 2
+        "line" : "I think I'm close to getting a bite...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "needRod",
-      	"line": "Hi there!",
-      	"person": 1
+        "id" : "lostRace",
+        "line" : "Hi there!",
+        "person" : 1
       }, {
-      	"line": "I'm Dina",
-      	"person": 1
+        "line" : "I'm Dina",
+        "person" : 1
       }, {
-      	"line": "Hi. I'm Ken.",
-      	"person": 2
+        "line" : "Not now...",
+        "person" : 2
       }, {
-      	"line": "What's up?",
-      	"person": 1
+        "line" : "I think I'm close to getting a bite...",
+        "person" : 2
       }, {
-      	"line": "Not a lot.",
-      	"person": 2
+        "linkTo" : "/map/"
       }, {
-      	"line": "Just fishing.",
-      	"person": 2
+        "id" : "needRod",
+        "line" : "Hi there!",
+        "person" : 1
       }, {
-      	"line": "Fishing?",
-      	"person": 1
+        "line" : "I'm Dina",
+        "person" : 1
       }, {
-      	"line": "Yup.",
-      	"person": 2
+        "line" : "Hi. I'm Ken.",
+        "person" : 2
       }, {
-      	"line": "Fishing.",
-      	"person": 2
+        "line" : "What's up?",
+        "person" : 1
       }, {
-      	"line": "Buuuuut....",
-      	"person": 1
+        "line" : "Not a lot.",
+        "person" : 2
       }, {
-      	"line": "There isn't any water here.",
-      	"person": 1
+        "line" : "Just fishing.",
+        "person" : 2
       }, {
-      	"line": "No, I know.",
-      	"person": 2
+        "line" : "Fishing?",
+        "person" : 1
       }, {
-      	"line": "But there will be soon.",
-      	"person": 2
+        "line" : "Yup.",
+        "person" : 2
       }, {
-      	"line": "Could I borrow your rod in the mean time?",
-      	"person": 1
+        "line" : "Fishing.",
+        "person" : 2
       }, {
-      	"line": "While you wait for the rain...",
-      	"person": 1
+        "line" : "Buuuuut....",
+        "person" : 1
       }, {
-      	"line": "Hmm.",
-      	"person": 2
+        "line" : "There isn't any water here.",
+        "person" : 1
       }, {
-      	"line": "I don't think so.",
-      	"person": 2
+        "line" : "No, I know.",
+        "person" : 2
       }, {
-      	"line": "I've been waiting a while.",
-      	"person": 2
+        "line" : "But there will be soon.",
+        "person" : 2
       }, {
-      	"line": "So it's got to come soon.",
-      	"person": 2
+        "line" : "Could I borrow your rod in the mean time?",
+        "person" : 1
       }, {
-      	"line": "When you say the water is coming",
-      	"person": 1
+        "line" : "While you wait for the rain...",
+        "person" : 1
       }, {
-      	"line": "Do you mean rain?",
-      	"person": 1
+        "line" : "Hmm.",
+        "person" : 2
       }, {
-      	"line": "No. I mean I'm sure a river or a lake",
-      	"person": 2
+        "line" : "I don't think so.",
+        "person" : 2
       }, {
-      	"line": "Will turn up here sooner or later.",
-      	"person": 2
+        "line" : "I've been waiting a while.",
+        "person" : 2
       }, {
-      	"line": "Why do you think that?",
-      	"person": 1
+        "line" : "So it's got to come soon.",
+        "person" : 2
       }, {
-      	"line": "Well,",
-      	"person": 2
+        "line" : "When you say the water is coming",
+        "person" : 1
       }, {
-      	"line": "Cedric came and sat on my head.",
-      	"person": 2
+        "line" : "Do you mean rain?",
+        "person" : 1
       }, {
-      	"line": "And I took it as a sign.",
-      	"person": 2
+        "line" : "No. I mean I'm sure a river or a lake",
+        "person" : 2
       }, {
-      	"line": "I mean,",
-      	"person": 2
+        "line" : "Will turn up here sooner or later.",
+        "person" : 2
       }, {
-      	"line": "Whoever heard of an aquaphobic swan?",
-      	"person": 2
+        "line" : "Why do you think that?",
+        "person" : 1
       }, {
-      	"line": "It's only a matter of time",
-      	"person": 2
+        "line" : "Well,",
+        "person" : 2
       }, {
-      	"id": "failedQuiz",
-      	"setState": "failedQuiz",
-      	"line": "You know there are loads of lakes on this island, right?",
-      	"person": 1
+        "line" : "Cedric came and sat on my head.",
+        "person" : 2
       }, {
-      	"line": "Lots of them are really nice.",
-      	"person": 1
+        "line" : "And I took it as a sign.",
+        "person" : 2
       }, {
-      	"line": "I'm sure Cedric would love them...",
-      	"person": 1
+        "line" : "I mean,",
+        "person" : 2
       }, {
-      	"line": "Hmm",
-      	"person": 2
+        "line" : "Whoever heard of an aquaphobic swan?",
+        "person" : 2
       }, {
-      	"line": "I could be tempted",
-      	"person": 2
+        "line" : "It's only a matter of time",
+        "person" : 2
       }, {
-      	"line": "So tell me",
-      	"person": 2
+        "id" : "failedQuiz",
+        "line" : "You know there are loads of lakes on this island, right?",
+        "person" : 1,
+        "setState" : "failedQuiz"
       }, {
-      	"line": "Are there any lakes with [QUESTION]?",
-      	"person": 2
+        "line" : "Lots of them are really nice.",
+        "person" : 1
       }, {
-      	"decision" : {
+        "line" : "I'm sure Cedric would love them...",
+        "person" : 1
+      }, {
+        "line" : "Hmm",
+        "person" : 2
+      }, {
+        "line" : "I could be tempted",
+        "person" : 2
+      }, {
+        "line" : "So tell me",
+        "person" : 2
+      }, {
+        "line" : "Are there any lakes with [QUESTION]?",
+        "person" : 2
+      }, {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question2incorrect",
             "text" : "Question 1 incorrect"
@@ -434,14 +434,14 @@
           }, {
             "jumpTo" : "question2incorrect",
             "text" : "Question 1 incorrect"
-          }]
+          } ]
         }
       }, {
-      	"id": "question2correct",
-      	"line": "What about [QUESTION]?",
-      	"person": 2
+        "id" : "question2correct",
+        "line" : "What about [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question3incorrect",
             "text" : "Question 2 incorrect"
@@ -451,14 +451,14 @@
           }, {
             "jumpTo" : "question3correct",
             "text" : "Question 2 correct"
-          }]
+          } ]
         }
       }, {
-      	"id": "question3correct",
-      	"line": "And [QUESTION]?",
-      	"person": 2
+        "id" : "question3correct",
+        "line" : "And [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question4incorrect",
             "text" : "Question 3 incorrect"
@@ -468,14 +468,14 @@
           }, {
             "jumpTo" : "question4correct",
             "text" : "Question 3 correct"
-          }]
+          } ]
         }
       }, {
-      	"id": "question4correct",
-      	"line": "Where is the best [QUESTION]?",
-      	"person": 2
+        "id" : "question4correct",
+        "line" : "Where is the best [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question5correct",
             "text" : "Question 4 correct"
@@ -485,14 +485,14 @@
           }, {
             "jumpTo" : "question5incorrect",
             "text" : "Question 4 incorrect"
-          }]
+          } ]
         }
       }, {
-      	"id": "question5correct",
-      	"line": "Which is the biggest [QUESTION]?",
-      	"person": 2
+        "id" : "question5correct",
+        "line" : "Which is the biggest [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question6incorrect",
             "text" : "Question 5 incorrect"
@@ -502,14 +502,14 @@
           }, {
             "jumpTo" : "question6incorrect",
             "text" : "Question 5 incorrect"
-          }]
+          } ]
         }
-      },  {
-      	"id": "question6correct",
-      	"line": "Where is the best [QUESTION]?",
-      	"person": 2
       }, {
-      	"decision" : {
+        "id" : "question6correct",
+        "line" : "Where is the best [QUESTION]?",
+        "person" : 2
+      }, {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "answersCorrect",
             "text" : "Question 6 correct"
@@ -519,14 +519,14 @@
           }, {
             "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
-          }]
+          } ]
         }
       }, {
-      	"id": "question2incorrect",
-      	"line": "What about [QUESTION]?",
-      	"person": 2
+        "id" : "question2incorrect",
+        "line" : "What about [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question3incorrect",
             "text" : "Question 2 incorrect"
@@ -536,14 +536,14 @@
           }, {
             "jumpTo" : "question3incorrect",
             "text" : "Question 2 correct"
-          }]
+          } ]
         }
       }, {
-      	"id": "question3incorrect",
-      	"line": "And [QUESTION]?",
-      	"person": 2
+        "id" : "question3incorrect",
+        "line" : "And [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question4incorrect",
             "text" : "Question 3 incorrect"
@@ -553,14 +553,14 @@
           }, {
             "jumpTo" : "question4incorrect",
             "text" : "Question 3 correct"
-          }]
+          } ]
         }
       }, {
-      	"id": "question4incorrect",
-      	"line": "Where is the best [QUESTION]?",
-      	"person": 2
+        "id" : "question4incorrect",
+        "line" : "Where is the best [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question5incorrect",
             "text" : "Question 4 correct"
@@ -570,14 +570,14 @@
           }, {
             "jumpTo" : "question5incorrect",
             "text" : "Question 4 incorrect"
-          }]
+          } ]
         }
       }, {
-      	"id": "question5incorrect",
-      	"line": "Which is the biggest [QUESTION]?",
-      	"person": 2
+        "id" : "question5incorrect",
+        "line" : "Which is the biggest [QUESTION]?",
+        "person" : 2
       }, {
-      	"decision" : {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "question6incorrect",
             "text" : "Question 5 incorrect"
@@ -587,14 +587,14 @@
           }, {
             "jumpTo" : "question6incorrect",
             "text" : "Question 5 incorrect"
-          }]
+          } ]
         }
-      },  {
-      	"id": "question6incorrect",
-      	"line": "Where is the best [QUESTION]?",
-      	"person": 2
       }, {
-      	"decision" : {
+        "id" : "question6incorrect",
+        "line" : "Where is the best [QUESTION]?",
+        "person" : 2
+      }, {
+        "decision" : {
           "options" : [ {
             "jumpTo" : "answersIncorrect",
             "text" : "Question 6 correct"
@@ -604,86 +604,86 @@
           }, {
             "jumpTo" : "answersIncorrect",
             "text" : "Question 6 incorrect"
-          }]
+          } ]
         }
       }, {
-      	"id": "answersIncorrect",
-      	"line": "Hmm. I dunno.",
-      	"person": 2
+        "id" : "answersIncorrect",
+        "line" : "Hmm. I dunno.",
+        "person" : 2
       }, {
-      	"line": "I'm not convinced",
-      	"person": 2
+        "line" : "I'm not convinced",
+        "person" : 2
       }, {
-      	"line": "I think I'll stay here for now.",
-      	"person": 2
-      }, {
-        "linkTo" : "/map/"
-      }, {
-      	"id": "answersCorrect",
-      	"line": "Hmm.",
-      	"person": 2
-      }, {
-      	"line": "Maybe after all that",
-      	"person": 2
-      }, {
-      	"line": "I might just give up on fishing.",
-      	"person": 2
-      }, {
-      	"line": "Me and Cedric can go bungee jumping instead.",
-      	"person": 2
-      }, {
-      	"line": "Here, you can have my rod.",
-      	"setState": "gotRod",
-      	"person": 2,
-      	"removeCharacter": {
-      		"row": 20,
-      		"col": 6
-      	}
+        "line" : "I think I'll stay here for now.",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
-      }]
-    },,
+      }, {
+        "id" : "answersCorrect",
+        "line" : "Hmm.",
+        "person" : 2
+      }, {
+        "line" : "Maybe after all that",
+        "person" : 2
+      }, {
+        "line" : "I might just give up on fishing.",
+        "person" : 2
+      }, {
+        "line" : "Me and Cedric can go bungee jumping instead.",
+        "person" : 2
+      }, {
+        "line" : "Here, you can have my rod.",
+        "person" : 2,
+        "removeCharacter" : {
+          "col" : 6,
+          "row" : 20
+        },
+        "setState" : "gotRod"
+      }, {
+        "linkTo" : "/map/"
+      } ]
+    },
     "levendig" : {
       "scene" : [ {
-      	"id": "secondIsland",
-      	"line": "...",
-      	"person": 2
+        "id" : "secondIsland",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "noBoots",
-      	"line": "...",
-      	"person": 2
+        "id" : "noBoots",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "lostRace",
-      	"line": "...",
-      	"person": 2
+        "id" : "lostRace",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "needRod",
-      	"line": "...",
-      	"person": 2
+        "id" : "needRod",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "gotRod",
-      	"line": "...",
-      	"person": 2
+        "id" : "gotRod",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "wonRace",
-      	"line": "...",
-      	"person": 2
+        "id" : "wonRace",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "haveBoots",
-      	"line": "...",
-      	"person": 2
+        "id" : "haveBoots",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       } ]
@@ -949,75 +949,75 @@
       }, {
         "linkTo" : "/travel/"
       }, {
-      	"id": "secondIsland",
-      	"line": "Here we are!",
-      	"person": 2
+        "id" : "secondIsland",
+        "line" : "Here we are!",
+        "person" : 2
       }, {
-      	"line": "Thanks so much!",
-      	"person": 1
+        "line" : "Thanks so much!",
+        "person" : 1
       }, {
-      	"line": "One more thing...",
-      	"person": 2
+        "line" : "One more thing...",
+        "person" : 2
       }, {
-      	"line": "It's dangerous down here",
-      	"person": 2
+        "line" : "It's dangerous down here",
+        "person" : 2
       }, {
-      	"line": "I'll give you a map",
-      	"person": 2
+        "line" : "I'll give you a map",
+        "person" : 2
       }, {
-      	"line": "Which you can use to find my emergency supply kit",
-      	"person": 2
+        "line" : "Which you can use to find my emergency supply kit",
+        "person" : 2
       }, {
-      	"line": "You never know when it might come in handy",
-      	"person": 2
+        "line" : "You never know when it might come in handy",
+        "person" : 2
       }, {
-      	"line": "Thanks!",
-      	"person": 1
+        "line" : "Thanks!",
+        "person" : 1
       }, {
-      	"linkTo": "/clue/"
+        "linkTo" : "/clue/"
       } ]
     },
     "runner" : {
       "scene" : [ {
-      	"id": "secondIsland",
-      	"line": "...",
-      	"person": 2
+        "id" : "secondIsland",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "noBoots",
-      	"line": "...",
-      	"person": 2
+        "id" : "noBoots",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "lostRace",
-      	"line": "...",
-      	"person": 2
+        "id" : "lostRace",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "needRod",
-      	"line": "...",
-      	"person": 2
+        "id" : "needRod",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "gotRod",
-      	"line": "...",
-      	"person": 2
+        "id" : "gotRod",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "wonRace",
-      	"line": "...",
-      	"person": 2
+        "id" : "wonRace",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
-      	"id": "haveBoots",
-      	"line": "...",
-      	"person": 2
+        "id" : "haveBoots",
+        "line" : "...",
+        "person" : 2
       }, {
         "linkTo" : "/map/"
       } ]
@@ -1309,9 +1309,9 @@
       "x" : 11,
       "y" : 2
     },
-    "inventory": {
-    	"map": false,
-    	"chocolate": false
+    "inventory" : {
+      "chocolate" : false,
+      "map" : false
     },
     "rows" : [ {
       "cols" : [ {
@@ -1983,8 +1983,8 @@
       }, {
         "height" : 2
       }, {
-        "height" : 2,
-        "character": "envelope"
+        "character" : "envelope",
+        "height" : 2
       }, {
         "height" : 3
       }, {
@@ -2214,8 +2214,8 @@
       }, {
         "height" : 1
       }, {
-        "height" : 1,
-        "character": "runner"
+        "character" : "runner",
+        "height" : 1
       }, {
         "height" : 0
       }, {
@@ -2253,8 +2253,8 @@
       }, {
         "height" : 3
       }, {
-        "height" : 2,
-        "character": "fisherman"
+        "character" : "fisherman",
+        "height" : 2
       }, {
         "height" : 2
       }, {
@@ -2338,8 +2338,8 @@
       }, {
         "height" : 0
       }, {
-        "height" : 2,
-        "character": "levendig"
+        "character" : "levendig",
+        "height" : 2
       }, {
         "height" : 3
       }, {
