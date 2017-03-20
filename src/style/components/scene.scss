@@ -224,6 +224,10 @@
 	$dina-height: 200px;
 	$wizard-width: 160px;
 	$wizard-height: 264px;
+	$fisherman-width: 160px;
+	$fisherman-height: 264px;
+	$runner-width: 96px;
+	$runner-height: 184px;
 	$pirate-width: 160px;
 	$pirate-height: 208px;
 	$brute-width: 584px;
@@ -337,6 +341,18 @@
 			width: $wizard-width;
 			height: $wizard-height;
 			background-image: url("/assets/images/wizard.png");
+		}
+
+		&--fisherman {
+			width: $fisherman-width;
+			height: $fisherman-height;
+			background-image: url("/assets/images/fisherman.png");
+		}
+
+		&--runner {
+			width: $runner-width;
+			height: $runner-height;
+			background-image: url("/assets/images/runner.png");
 		}
 
 		&--pirate {
@@ -465,6 +481,21 @@
 		&--fighter {
 			right: $fighter-width * 0.6;
 			bottom: 0.9 * $fighter-height;	
+		}
+
+		&--fisherman {
+			right: $fisherman-width + 16px;
+			bottom: 0.9 * $fisherman-height;	
+		}
+
+		&--runner {
+			right: $runner-width + 16px;
+			bottom: 0.9 * $runner-height;	
+		}
+
+		&--levendig {
+			right: $levendig-width + 16px;
+			bottom: 0.9 * $levendig-height;	
 		}
 	}
 

@@ -19,6 +19,34 @@
 		background-image: url("/assets/images/pirate.png");
 	}
 
+	$fisherman-width: 19px;
+	$fisherman-height: 31px;
+	&--fisherman {
+		width: $fisherman-width * $multiplier;
+		height: $fisherman-height * (3 * $multiplier);
+		margin-left: -$fisherman-width / 2 * $multiplier;
+		background-image: url("/assets/images/fisherman.png");
+	}
+
+	$runner-width: 12px;
+	$runner-height: 23px;
+	&--runner {
+		width: $runner-width * $multiplier;
+		height: $runner-height * (3 * $multiplier);
+		margin-left: -$runner-width / 2 * $multiplier;
+		background-image: url("/assets/images/runner.png");
+	}
+
+	$levendig-width: 13px;
+	$levendig-height: 24px;
+	$levendig-frames: 3;
+	&--levendig {
+		width: $levendig-width * $multiplier;
+		height: $levendig-height * (3 * $multiplier);
+		margin-left: -$levendig-width / 2 * $multiplier;
+		background-size: (100% * $levendig-frames) 100%;
+		background-image: url("/assets/images/levendig.png");
+	}
 
 	$envelope-width: 15px;
 	$envelope-height: 12px;

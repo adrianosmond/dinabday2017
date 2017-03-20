@@ -156,22 +156,22 @@
 		background-size: cover;
 		background-position: left center;
 		background-repeat: no-repeat;
-		transition: transform $cell-move-time - 0.2s;
-		transition-delay: 0s;
+		// transition: transform $cell-move-time - 0.2s;
+		// transition-delay: 0s;
 
 		&--walking {
 			animation: walk 0.25s steps(2) infinite;
 		}
 
-		&--height-2 {
-			transition-delay: 0.2s;
-			transform: translateY(-10px);
-		}
+		// &--height-2 {
+		// 	transition-delay: 0.2s;
+		// 	transform: translateY(-10px);
+		// }
 
-		&--height-3 {
-			transition-delay: 0.2s;
-			transform: translateY(-20px);
-		}
+		// &--height-3 {
+		// 	transition-delay: 0.2s;
+		// 	transform: translateY(-20px);
+		// }
 	}
 
 	@keyframes walk {

@@ -31,7 +31,7 @@ export default class Travel extends Component {
 		}, 7900);
 
 		setTimeout(() => {
-			route("/map/");
+			route("/conversation/pirate/");
 		}, 9900);
 	}
 

@@ -12,7 +12,9 @@ export default class Map extends Component {
 		moving: false
 	};
 
+
 	componentWillMount() {
+		this.walkingTimeout = null;
 		let ref = firebase.database().ref("map").once("value", (result) => {
 			let map = result.val();
 			let hideFog = map.inventory && map.inventory.map;
@@ -88,7 +90,11 @@ export default class Map extends Component {
 				blockKeys = false;
 			}, 350);
 
-			setTimeout(() => {
+			if (this.walkingTimeout) {
+				clearTimeout(this.walkingTimeout);
+			}
+
+			this.walkingTimeout = setTimeout(() => {
 				this.setState({
 					moving: false
 				});
