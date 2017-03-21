@@ -647,7 +647,8 @@
           "col" : 6,
           "row" : 20
         },
-        "setState" : "gotRod"
+        "setState" : "gotRod",
+        "gainItem": "rod"
       }, {
         "linkTo" : "/map/"
       } ]
@@ -1308,34 +1309,58 @@
         "line" : "I can work with that.",
         "person" : 2
       }, {
-        "line" : "",
+        "line" : "Here's what you've got to do",
+        "person" : 2
+      }, {
+        "line" : "You need to get some chocolate",
+        "person" : 2
+      }, {
+        "line" : "A stick of some kind",
+        "person" : 2
+      }, {
+        "line" : "And some string",
+        "person" : 2
+      }, {
+        "line" : "...Ok",
         "person" : 1
       }, {
-        "line" : "",
+        "line" : "Tie the chocolate to the stick with the string",
+        "person" : 2
+      }, {
+        "line" : "And put the stick down your back",
+        "person" : 2
+      }, {
+        "line" : "And BOOM!",
+        "person" : 2
+      }, {
+        "line" : "You've got a motivator",
+        "person" : 2
+      }, {
+        "line" : "...?",
         "person" : 1
       }, {
-        "line" : "",
+        "line" : "Think about it",
+        "person" : 2
+      }, {
+        "line" : "Chocolate, dangling right in front of you",
+        "person" : 2
+      }, {
+        "line" : "So close",
+        "person" : 2
+      }, {
+        "line" : "If only you could get to it",
+        "person" : 2
+      }, {
+        "line" : "Hmm.",
         "person" : 1
       }, {
-        "line" : "",
+        "line" : "Maybe that'd actually work",
         "person" : 1
       }, {
-        "line" : "",
+        "line" : "Thanks!",
         "person" : 1
       }, {
-        "line" : "",
-        "person" : 1
-      }, {
-        "line" : "",
-        "person" : 1
-      }, {
-        "line" : "",
-        "person" : 1
-      }, {
-        "line" : "",
-        "person" : 1
-      }, {
-        "line" : "",
+        "line" : "I guess I just need to find a stick and some string...",
         "person" : 1,
         "setState": "needRod"
       }, {
