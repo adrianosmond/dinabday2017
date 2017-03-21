@@ -641,14 +641,14 @@
         "line" : "Me and Cedric can go bungee jumping instead",
         "person" : 2
       }, {
+        "gainItem" : "rod",
         "line" : "Here, you can have my rod",
         "person" : 2,
         "removeCharacter" : {
           "col" : 6,
           "row" : 20
         },
-        "setState" : "gotRod",
-        "gainItem": "rod"
+        "setState" : "gotRod"
       }, {
         "linkTo" : "/map/"
       } ]
@@ -1149,7 +1149,7 @@
       }, {
         "line" : "Yeah. I think I'll go do a bit of exploring",
         "person" : 1
-      },{
+      }, {
         "linkTo" : "/map/"
       }, {
         "id" : "noBoots",
@@ -1362,7 +1362,7 @@
       }, {
         "line" : "I guess I just need to find a stick and some string...",
         "person" : 1,
-        "setState": "needRod"
+        "setState" : "needRod"
       }, {
         "linkTo" : "/map/"
       }, {
@@ -1754,10 +1754,10 @@
       "y" : 2
     },
     "inventory" : {
-      "boots": false,
+      "boots" : false,
       "chocolate" : false,
       "map" : false,
-      "rod": false
+      "rod" : false
     },
     "rows" : [ {
       "cols" : [ {
