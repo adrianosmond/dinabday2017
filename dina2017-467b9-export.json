@@ -739,7 +739,7 @@
       }, {
         "line" : "What do you say?",
         "person" : 2,
-        "setState": "metLevendig"
+        "setState" : "metLevendig"
       }, {
         "decision" : {
           "options" : [ {
