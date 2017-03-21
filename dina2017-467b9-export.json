@@ -1367,25 +1367,100 @@
         "linkTo" : "/map/"
       }, {
         "id" : "needRod",
-        "line" : "...",
+        "line" : "Hey!",
         "person" : 2
+      }, {
+        "line" : "How's the training going?",
+        "person" : 2
+      }, {
+        "line" : "Have you beaten her yet?",
+        "person" : 2
+      }, {
+        "line" : "Not yet",
+        "person" : 1
+      }, {
+        "line" : "I'm still trying to get hold of a stick and some string",
+        "person" : 1
+      }, {
+        "line" : "Oh ok",
+        "person" : 2
+      }, {
+        "line" : "Good luck",
+        "person" : 2
+      }, {
+        "line" : "I'm rooting for you",
+        "person" : 2
+      }, {
+        "line" : "Thanks!",
+        "person" : 1
       }, {
         "linkTo" : "/map/"
       }, {
         "id" : "gotRod",
-        "line" : "...",
+        "line" : "Hey!",
         "person" : 2
+      }, {
+        "line" : "How's the training going?",
+        "person" : 2
+      }, {
+        "line" : "Have you beaten her yet?",
+        "person" : 2
+      }, {
+        "line" : "Not yet",
+        "person" : 1
+      }, {
+        "line" : "But I've got hold of a stick and some string!",
+        "person" : 1
+      }, {
+        "line" : "And the chocolate?",
+        "person" : 2
+      }, {
+        "line" : "Yeah!",
+        "person" : 1
+      }, {
+        "line" : "What are you waiting for?",
+        "person" : 2
+      }, {
+        "line" : "Go beat her!",
+        "person" : 2
+      }, {
+        "line" : "Good luck",
+        "person" : 2
+      }, {
+        "line" : "I'm rooting for you",
+        "person" : 2
+      }, {
+        "line" : "Thanks!",
+        "person" : 1
       }, {
         "linkTo" : "/map/"
       }, {
         "id" : "wonRace",
-        "line" : "...",
+        "line" : "I did it!",
+        "person" : 1
+      }, {
+        "line" : "I beat her!",
+        "person" : 1
+      }, {
+        "line" : "Congrats!",
+        "person" : 2
+      }, {
+        "line" : "I'll go gloat at her in a bit",
         "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
         "id" : "haveBoots",
-        "line" : "...",
+        "line" : "I did it!",
+        "person" : 1
+      }, {
+        "line" : "I beat her!",
+        "person" : 1
+      }, {
+        "line" : "Congrats!",
+        "person" : 2
+      }, {
+        "line" : "I'll go gloat at her in a bit",
         "person" : 2
       }, {
         "linkTo" : "/map/"
