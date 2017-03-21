@@ -1209,29 +1209,135 @@
         "line" : "And I lost",
         "person" : 1
       }, {
-        "line" : "Who was that with?",
-        "person" : 2
-      }, {
         "line" : "Ah, you'll be fine. Just train a bit",
-        "person" : 1
+        "person" : 2
       }, {
         "line" : "I didn't want to race anyone today",
-        "person" : 2
+        "person" : 1
       }, {
         "line" : "It's my birthday",
-        "person" : 2
+        "person" : 1
       }, {
         "line" : "And I just wanted to sit around eating chocolate",
-        "person" : 2
+        "person" : 1
       }, {
         "line" : "But instead I'm having to train drunks",
-        "person" : 2
+        "person" : 1
       }, {
         "line" : "And race busty maidens",
+        "person" : 1
+      }, {
+        "line" : "Did you say busty maidens?",
         "person" : 2
       }, {
-        "line" : "Ah, you'll be fine. Just train a bit",
+        "line" : "...Yes",
         "person" : 1
+      }, {
+        "line" : "You don't happen to know her name do you?",
+        "person" : 2
+      }, {
+        "line" : "Levendig McBorsten",
+        "person" : 1
+      }, {
+        "line" : "Ooooh",
+        "person" : 2
+      }, {
+        "line" : "I know her",
+        "person" : 2
+      }, {
+        "line" : "She was a young talent in the running scene when I was in my prime",
+        "person" : 2
+      }, {
+        "line" : "I knew that I couldn't stay on top forever",
+        "person" : 2
+      }, {
+        "line" : "But the way that she shamed me when she beat me for the first time",
+        "person" : 2
+      }, {
+        "line" : "I can never forget",
+        "person" : 2
+      }, {
+        "line" : "You've just got yourself a personal trainer",
+        "person" : 2
+      }, {
+        "line" : "I'm going to help you beat her",
+        "person" : 2
+      }, {
+        "line" : "Thanks!",
+        "person" : 1
+      }, {
+        "line" : "That's really kind of you",
+        "person" : 1
+      }, {
+        "line" : "Anything to put her back in her place",
+        "person" : 2
+      }, {
+        "line" : "So how do we do this?",
+        "person" : 1
+      }, {
+        "line" : "First you need to tell me",
+        "person" : 2
+      }, {
+        "line" : "And be honest",
+        "person" : 2
+      }, {
+        "line" : "What's the most important thing in the world to you?",
+        "person" : 2
+      }, {
+        "line" : "Ending world hunger",
+        "person" : 1
+      }, {
+        "line" : "Bullshit!",
+        "person" : 2
+      }, {
+        "line" : "...My wonderful and loving boyfriend",
+        "person" : 1
+      }, {
+        "line" : "You're lying!",
+        "person" : 2
+      }, {
+        "line" : "...",
+        "person" : 1
+      }, {
+        "line" : "Chocolate",
+        "person" : 1
+      }, {
+        "line" : "Ok. ",
+        "person" : 2
+      }, {
+        "line" : "I can work with that.",
+        "person" : 2
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1
+      }, {
+        "line" : "",
+        "person" : 1,
+        "setState": "needRod"
       }, {
         "linkTo" : "/map/"
       }, {
