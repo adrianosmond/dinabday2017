@@ -22,7 +22,7 @@
         "line" : "Give you 50p for some...",
         "person" : 2
       }, {
-        "line" : "Sorry.",
+        "line" : "Sorry",
         "person" : 1
       }, {
         "linkTo" : "/map/"
@@ -31,22 +31,22 @@
         "line" : "Are you Frank?",
         "person" : 1
       }, {
-        "line" : "Frrrnk. Tha's me.",
+        "line" : "Frrrnk. Tha's me",
         "person" : 2
       }, {
-        "line" : "I'm the grrrtst fighter on this island.",
+        "line" : "I'm the grrrtst fighter on this island",
         "person" : 2
       }, {
-        "line" : "Steve the pirate sent me to find you.",
+        "line" : "Steve the pirate sent me to find you",
         "person" : 1
       }, {
-        "line" : "He said you had his map.",
+        "line" : "He said you had his map",
         "person" : 1
       }, {
         "line" : "Map?",
         "person" : 2
       }, {
-        "line" : "I suppose I did have it.",
+        "line" : "I suppose I did have it",
         "person" : 2
       }, {
         "line" : "Mebbe I'll remumber where it is if I can get some more gin!",
@@ -61,7 +61,7 @@
         "line" : "It's my birthday and I have plans",
         "person" : 1
       }, {
-        "line" : "I can't be wandering around sorting out everyone's lives for them all day.",
+        "line" : "I can't be wandering around sorting out everyone's lives for them all day",
         "person" : 1
       }, {
         "line" : "I's yr burfday?",
@@ -85,10 +85,10 @@
         "line" : "Steve's map",
         "person" : 1
       }, {
-        "line" : "Oh yes. I got it.",
+        "line" : "Oh yes. I got it",
         "person" : 2
       }, {
-        "line" : "And I didn't want to lose it.",
+        "line" : "And I didn't want to lose it",
         "person" : 2
       }, {
         "line" : "So I hid it!",
@@ -100,7 +100,7 @@
         "line" : "...",
         "person" : 2
       }, {
-        "line" : "Don't remember.",
+        "line" : "Don't remember",
         "person" : 2
       }, {
         "line" : "...",
@@ -109,34 +109,34 @@
         "line" : "You don't remember?",
         "person" : 1
       }, {
-        "line" : "I wrote down where I hid it.",
+        "line" : "I wrote down where I hid it",
         "person" : 2
       }, {
-        "line" : "And kept it safe in my wallet.",
+        "line" : "And kept it safe in my wallet",
         "person" : 2
       }, {
         "line" : "So shall we look in your wallet?",
         "person" : 1
       }, {
-        "line" : "Can't.",
+        "line" : "Can't",
         "person" : 2
       }, {
-        "line" : "He took it.",
+        "line" : "He took it",
         "person" : 2
       }, {
         "line" : "Who?",
         "person" : 1
       }, {
-        "line" : "That big bastrd. I dunno his name.",
+        "line" : "That big bastrd. I dunno his name",
         "person" : 2
       }, {
         "line" : "...",
         "person" : 1
       }, {
-        "line" : "'Salright. I can take him in a fight.",
+        "line" : "'Salright. I can take him in a fight",
         "person" : 2
       }, {
-        "line" : "'N get it back for ya.",
+        "line" : "'N get it back for ya",
         "person" : 2
       }, {
         "line" : "You can come cheer me on. Whaddya say?",
@@ -146,10 +146,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/fight/",
-            "text" : "Ok then."
+            "text" : "Ok then"
           }, {
             "linkTo" : "/map/",
-            "text" : "No thanks."
+            "text" : "No thanks"
           } ]
         }
       }, {
@@ -160,10 +160,10 @@
         "line" : "Imma help you out",
         "person" : 2
       }, {
-        "line" : "I can take the big bastrd in a fight.",
+        "line" : "I can take the big bastrd in a fight",
         "person" : 2
       }, {
-        "line" : "'N get the map back for ya.",
+        "line" : "'N get the map back for ya",
         "person" : 2
       }, {
         "line" : "You can come cheer me on. Whaddya say?",
@@ -172,10 +172,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/fight/",
-            "text" : "Ok then."
+            "text" : "Ok then"
           }, {
             "linkTo" : "/map/",
-            "text" : "No thanks."
+            "text" : "No thanks"
           } ]
         }
       }, {
@@ -210,19 +210,19 @@
         "line" : "Is that I'm...",
         "person" : 2
       }, {
-        "line" : "...I'm never gonna give you up.",
+        "line" : "...I'm never gonna give you up",
         "person" : 2
       }, {
-        "line" : "But I think you can scratch that from his name.",
+        "line" : "But I think you can scratch that from his name",
         "person" : 2
       }, {
         "line" : "But it doesn't matter",
         "person" : 2
       }, {
-        "line" : "Cos I'll take the big bastrd in a fight.",
+        "line" : "Cos I'll take the big bastrd in a fight",
         "person" : 2
       }, {
-        "line" : "'N get the map back for ya.",
+        "line" : "'N get the map back for ya",
         "person" : 2
       }, {
         "line" : "You can come cheer me on. Whaddya say?",
@@ -231,10 +231,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/fight/",
-            "text" : "Ok then."
+            "text" : "Ok then"
           }, {
             "linkTo" : "/map/",
-            "text" : "No thanks."
+            "text" : "No thanks"
           } ]
         }
       }, {
@@ -290,7 +290,7 @@
         "line" : "Do you know where I could find some walking boots?",
         "person" : 1
       }, {
-        "line" : "I want to get over the mountains.",
+        "line" : "I want to get over the mountains",
         "person" : 1
       }, {
         "line" : "But I can't really do that in these shoes",
@@ -326,37 +326,37 @@
         "line" : "I'm Dina",
         "person" : 1
       }, {
-        "line" : "Hi. I'm Ken.",
+        "line" : "Hi. I'm Ken",
         "person" : 2
       }, {
         "line" : "What's up?",
         "person" : 1
       }, {
-        "line" : "Not a lot.",
+        "line" : "Not a lot",
         "person" : 2
       }, {
-        "line" : "Just fishing.",
+        "line" : "Just fishing",
         "person" : 2
       }, {
         "line" : "Fishing?",
         "person" : 1
       }, {
-        "line" : "Yup.",
+        "line" : "Yup",
         "person" : 2
       }, {
-        "line" : "Fishing.",
+        "line" : "Fishing",
         "person" : 2
       }, {
         "line" : "Buuuuut....",
         "person" : 1
       }, {
-        "line" : "There isn't any water here.",
+        "line" : "There isn't any water here",
         "person" : 1
       }, {
-        "line" : "No, I know.",
+        "line" : "No, I know",
         "person" : 2
       }, {
-        "line" : "But there will be soon.",
+        "line" : "But there will be soon",
         "person" : 2
       }, {
         "line" : "Could I borrow your rod in the mean time?",
@@ -365,16 +365,16 @@
         "line" : "While you wait for the rain...",
         "person" : 1
       }, {
-        "line" : "Hmm.",
+        "line" : "Hmm",
         "person" : 2
       }, {
-        "line" : "I don't think so.",
+        "line" : "I don't think so",
         "person" : 2
       }, {
-        "line" : "I've been waiting a while.",
+        "line" : "I've been waiting a while",
         "person" : 2
       }, {
-        "line" : "So it's got to come soon.",
+        "line" : "So it's got to come soon",
         "person" : 2
       }, {
         "line" : "When you say the water is coming",
@@ -386,7 +386,7 @@
         "line" : "No. I mean I'm sure a river or a lake",
         "person" : 2
       }, {
-        "line" : "Will turn up here sooner or later.",
+        "line" : "Will turn up here sooner or later",
         "person" : 2
       }, {
         "line" : "Why do you think that?",
@@ -395,10 +395,10 @@
         "line" : "Well,",
         "person" : 2
       }, {
-        "line" : "Cedric came and sat on my head.",
+        "line" : "Cedric came and sat on my head",
         "person" : 2
       }, {
-        "line" : "And I took it as a sign.",
+        "line" : "And I took it as a sign",
         "person" : 2
       }, {
         "line" : "I mean,",
@@ -415,7 +415,7 @@
         "person" : 1,
         "setState" : "failedQuiz"
       }, {
-        "line" : "Lots of them are really nice.",
+        "line" : "Lots of them are really nice",
         "person" : 1
       }, {
         "line" : "I'm sure Cedric would love them...",
@@ -617,31 +617,31 @@
         }
       }, {
         "id" : "answersIncorrect",
-        "line" : "Hmm. I dunno.",
+        "line" : "Hmm. I dunno",
         "person" : 2
       }, {
         "line" : "I'm not convinced",
         "person" : 2
       }, {
-        "line" : "I think I'll stay here for now.",
+        "line" : "I think I'll stay here for now",
         "person" : 2
       }, {
         "linkTo" : "/map/"
       }, {
         "id" : "answersCorrect",
-        "line" : "Hmm.",
+        "line" : "Hmm",
         "person" : 2
       }, {
         "line" : "Maybe after all that",
         "person" : 2
       }, {
-        "line" : "I might just give up on fishing.",
+        "line" : "I might just give up on fishing",
         "person" : 2
       }, {
-        "line" : "Me and Cedric can go bungee jumping instead.",
+        "line" : "Me and Cedric can go bungee jumping instead",
         "person" : 2
       }, {
-        "line" : "Here, you can have my rod.",
+        "line" : "Here, you can have my rod",
         "person" : 2,
         "removeCharacter" : {
           "col" : 6,
@@ -661,10 +661,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/race/",
-            "text" : "Ok then."
+            "text" : "Ok then"
           }, {
             "linkTo" : "/map/",
-            "text" : "No thanks."
+            "text" : "No thanks"
           } ]
         }
       }, {
@@ -672,19 +672,19 @@
         "line" : "Hi!",
         "person" : 1
       }, {
-        "line" : "I'm Dina.",
+        "line" : "I'm Dina",
         "person" : 1
       }, {
         "line" : "Hi!",
         "person" : 2
       }, {
-        "line" : "The name's Levendig McBorsten.",
+        "line" : "The name's Levendig McBorsten",
         "person" : 2
       }, {
         "line" : "I'm the best runner on the island!",
         "person" : 2
       }, {
-        "line" : "Cool.",
+        "line" : "Cool",
         "person" : 1
       }, {
         "line" : "It's a bit tenuous,",
@@ -699,7 +699,7 @@
         "line" : "And I don't think I can do that in these...",
         "person" : 1
       }, {
-        "line" : "Sure. I've got a spare pair around somewhere.",
+        "line" : "Sure. I've got a spare pair around somewhere",
         "person" : 2
       }, {
         "line" : "You can have them",
@@ -708,7 +708,7 @@
         "line" : "Thanks!",
         "person" : 1
       }, {
-        "line" : "No wait, you cut me off.",
+        "line" : "No wait, you cut me off",
         "person" : 2
       }, {
         "line" : "I was saying",
@@ -720,7 +720,7 @@
         "line" : "If you can beat me in a race",
         "person" : 2
       }, {
-        "line" : "Just don't look at my chest while I run.",
+        "line" : "Just don't look at my chest while I run",
         "person" : 2
       }, {
         "line" : "What do you say?",
@@ -729,10 +729,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/race/",
-            "text" : "Ok then."
+            "text" : "Ok then"
           }, {
             "linkTo" : "/map/",
-            "text" : "No thanks."
+            "text" : "No thanks"
           } ]
         }
       }, {
@@ -755,10 +755,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/race/",
-            "text" : "You betcha."
+            "text" : "You betcha"
           }, {
             "linkTo" : "/map/",
-            "text" : "Not just now."
+            "text" : "Not just now"
           } ]
         }
       }, {
@@ -781,10 +781,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/race/",
-            "text" : "You betcha."
+            "text" : "You betcha"
           }, {
             "linkTo" : "/map/",
-            "text" : "Not just now."
+            "text" : "Not just now"
           } ]
         }
       }, {
@@ -807,10 +807,10 @@
         "decision" : {
           "options" : [ {
             "linkTo" : "/race/",
-            "text" : "You betcha."
+            "text" : "You betcha"
           }, {
             "linkTo" : "/map/",
-            "text" : "Not just now."
+            "text" : "Not just now"
           } ]
         }
       }, {
@@ -863,7 +863,7 @@
         "line" : "Aaarrrrr?",
         "person" : 1
       }, {
-        "line" : "You interrupted me.",
+        "line" : "You interrupted me",
         "person" : 2
       }, {
         "line" : "I was trying to say: 'Are you Dina?'",
@@ -887,7 +887,7 @@
         "line" : "Thanks!",
         "person" : 1
       }, {
-        "line" : "I'm Steve, by the way.",
+        "line" : "I'm Steve, by the way",
         "person" : 2
       }, {
         "line" : "That's a nice ship you've got",
@@ -905,7 +905,7 @@
         "line" : "The guy over there",
         "person" : 1
       }, {
-        "line" : "With the funny hat.",
+        "line" : "With the funny hat",
         "person" : 1
       }, {
         "line" : "Oh you mean Jim!",
@@ -929,43 +929,43 @@
         "line" : "Ummm...",
         "person" : 1
       }, {
-        "line" : "I'm not sure about the ethics of that.",
+        "line" : "I'm not sure about the ethics of that",
         "person" : 1
       }, {
-        "line" : "Don't worry about it.",
+        "line" : "Don't worry about it",
         "person" : 2
       }, {
         "line" : "I only pirate from Trump supporters",
         "person" : 2
       }, {
-        "line" : "... I guess that's ok.",
+        "line" : "... I guess that's ok",
         "person" : 1
       }, {
         "line" : "So can we go?",
         "person" : 1
       }, {
-        "line" : "No.",
+        "line" : "No",
         "person" : 2
       }, {
         "line" : "No?",
         "person" : 1
       }, {
-        "line" : "No.",
+        "line" : "No",
         "person" : 2
       }, {
         "line" : "I lent my map to Frank",
         "person" : 2
       }, {
-        "line" : "And he hasn't given it back.",
+        "line" : "And he hasn't given it back",
         "person" : 2
       }, {
-        "line" : "I can't walk all the way over there.",
+        "line" : "I can't walk all the way over there",
         "person" : 2
       }, {
-        "line" : "Not with my dodgy leg.",
+        "line" : "Not with my dodgy leg",
         "person" : 2
       }, {
-        "line" : "If you could pick it up I'll take you to the other island.",
+        "line" : "If you could pick it up I'll take you to the other island",
         "person" : 2
       }, {
         "line" : "...",
@@ -974,7 +974,7 @@
         "line" : "Ok",
         "person" : 1
       }, {
-        "line" : "That doesn't sound too hard.",
+        "line" : "That doesn't sound too hard",
         "person" : 1
       }, {
         "line" : "Just go find Frank and get the map back...",
@@ -987,13 +987,13 @@
         "line" : "Have you got my map yet?",
         "person" : 2
       }, {
-        "line" : "Not yet, no.",
+        "line" : "Not yet, no",
         "person" : 1
       }, {
         "line" : "Are you sure you need it?",
         "person" : 1
       }, {
-        "line" : "I've only got the one good eye.",
+        "line" : "I've only got the one good eye",
         "person" : 2
       }, {
         "line" : "Neither of my eyes are particularly good",
@@ -1002,16 +1002,16 @@
         "line" : "So I guess that's fair enough...",
         "person" : 1
       }, {
-        "line" : "I think Frank has it.",
+        "line" : "I think Frank has it",
         "person" : 2
       }, {
-        "line" : "Over in the north-east.",
+        "line" : "Over in the north-east",
         "person" : 2
       }, {
         "line" : "It's not far",
         "person" : 2
       }, {
-        "line" : "Sure. See you soon.",
+        "line" : "Sure. See you soon",
         "person" : 1
       }, {
         "linkTo" : "/map/"
@@ -1020,13 +1020,13 @@
         "line" : "Have you got my map yet?",
         "person" : 2
       }, {
-        "line" : "Not yet, no.",
+        "line" : "Not yet, no",
         "person" : 1
       }, {
-        "line" : "I think Frank has it.",
+        "line" : "I think Frank has it",
         "person" : 2
       }, {
-        "line" : "Over in the north-east.",
+        "line" : "Over in the north-east",
         "person" : 2
       }, {
         "line" : "It's not far",
@@ -1053,10 +1053,10 @@
         "line" : "When he was a littler bastard",
         "person" : 2
       }, {
-        "line" : "And when I ran a postal ship.",
+        "line" : "And when I ran a postal ship",
         "person" : 2
       }, {
-        "line" : "Those were simpler times.",
+        "line" : "Those were simpler times",
         "person" : 2
       }, {
         "line" : "I remember he wanted nothing to do with a couple of postal codes",
@@ -1065,7 +1065,7 @@
         "line" : "One was Warrington",
         "person" : 2
       }, {
-        "line" : "I think the other was Lerwick.",
+        "line" : "I think the other was Lerwick",
         "person" : 2
       }, {
         "linkTo" : "/map/"
@@ -1134,20 +1134,104 @@
     "runner" : {
       "scene" : [ {
         "id" : "secondIsland",
-        "line" : "...",
+        "line" : "Hi",
+        "person" : 1
+      }, {
+        "line" : "Nice island you've got here",
+        "person" : 1
+      }, {
+        "line" : "Thanks",
         "person" : 2
       }, {
+        "line" : "It's the great outdoors down here",
+        "person" : 2
+      }, {
+        "line" : "Yeah. I think I'll go do a bit of exploring",
+        "person" : 1
+      },{
         "linkTo" : "/map/"
       }, {
         "id" : "noBoots",
-        "line" : "...",
+        "line" : "Hi",
+        "person" : 1
+      }, {
+        "line" : "Hey there",
         "person" : 2
+      }, {
+        "line" : "Strange question",
+        "person" : 1
+      }, {
+        "line" : "I don't suppose you know where I could get some decent outdoor shoes?",
+        "person" : 1
+      }, {
+        "line" : "I would've had some in my youth",
+        "person" : 2
+      }, {
+        "line" : "But I'm not so active any more",
+        "person" : 2
+      }, {
+        "line" : "Your best bet is probably to see if you can find any runners",
+        "person" : 2
+      }, {
+        "line" : "When I was in the running club",
+        "person" : 2
+      }, {
+        "line" : "We used to hang out at the south end of the island",
+        "person" : 2
+      }, {
+        "line" : "Ok, thanks",
+        "person" : 1
+      }, {
+        "line" : "I'll do that",
+        "person" : 1
       }, {
         "linkTo" : "/map/"
       }, {
         "id" : "lostRace",
-        "line" : "...",
+        "line" : "Hey",
+        "person" : 1
+      }, {
+        "line" : "Hi",
         "person" : 2
+      }, {
+        "line" : "You're looking a bit down",
+        "person" : 2
+      }, {
+        "line" : "I suppose I am",
+        "person" : 1
+      }, {
+        "line" : "I just wanted to get some new shoes",
+        "person" : 1
+      }, {
+        "line" : "But then I had to get into this whole race thing",
+        "person" : 1
+      }, {
+        "line" : "And I lost",
+        "person" : 1
+      }, {
+        "line" : "Who was that with?",
+        "person" : 2
+      }, {
+        "line" : "Ah, you'll be fine. Just train a bit",
+        "person" : 1
+      }, {
+        "line" : "I didn't want to race anyone today",
+        "person" : 2
+      }, {
+        "line" : "It's my birthday",
+        "person" : 2
+      }, {
+        "line" : "And I just wanted to sit around eating chocolate",
+        "person" : 2
+      }, {
+        "line" : "But instead I'm having to train drunks",
+        "person" : 2
+      }, {
+        "line" : "And race busty maidens",
+        "person" : 2
+      }, {
+        "line" : "Ah, you'll be fine. Just train a bit",
+        "person" : 1
       }, {
         "linkTo" : "/map/"
       }, {
@@ -1200,16 +1284,16 @@
         "line" : "And who's 'we'?",
         "person" : 1
       }, {
-        "line" : "I know your name because I'm a wizard.",
+        "line" : "I know your name because I'm a wizard",
         "person" : 2
       }, {
-        "line" : "I thought that might be obvious from my clothing.",
+        "line" : "I thought that might be obvious from my clothing",
         "person" : 2
       }, {
-        "line" : "I even put on my formal hat.",
+        "line" : "I even put on my formal hat",
         "person" : 2
       }, {
-        "line" : "Never mind.",
+        "line" : "Never mind",
         "person" : 2
       }, {
         "line" : "'We' are me",
@@ -1218,19 +1302,19 @@
         "line" : "Steve the pirate",
         "person" : 2
       }, {
-        "line" : "and possibly Frank the fencer.",
+        "line" : "and possibly Frank the fencer",
         "person" : 2
       }, {
         "line" : "I'm not 100% sure about Frank",
         "person" : 2
       }, {
-        "line" : "Because he's drunk a lot of the time these days.",
+        "line" : "Because he's drunk a lot of the time these days",
         "person" : 2
       }, {
-        "line" : "He signed your card though.",
+        "line" : "He signed your card though",
         "person" : 2
       }, {
-        "line" : "It's a very nice card.",
+        "line" : "It's a very nice card",
         "person" : 2
       }, {
         "line" : "Here, let me just...",
@@ -1242,10 +1326,10 @@
         "line" : "Is everything ok?",
         "person" : 1
       }, {
-        "line" : "I don't know where I've put your card.",
+        "line" : "I don't know where I've put your card",
         "person" : 2
       }, {
-        "line" : "Now let me see.",
+        "line" : "Now let me see",
         "person" : 2
       }, {
         "line" : "When did I last have it...?",
@@ -1257,34 +1341,34 @@
         "line" : "Oh no",
         "person" : 2
       }, {
-        "line" : "I think I've left it on the other island.",
+        "line" : "I think I've left it on the other island",
         "person" : 2
       }, {
-        "line" : "Normally I'd send some eagles to go get it.",
+        "line" : "Normally I'd send some eagles to go get it",
         "person" : 2
       }, {
-        "line" : "But my eagles are at a spa retreat weekend.",
+        "line" : "But my eagles are at a spa retreat weekend",
         "person" : 2
       }, {
-        "line" : "So I think you might need to go get it yourself.",
+        "line" : "So I think you might need to go get it yourself",
         "person" : 2
       }, {
-        "line" : "Steve the pirate might be able to help you get there.",
+        "line" : "Steve the pirate might be able to help you get there",
         "person" : 2
       }, {
         "line" : "He has a ship. It's a bit further to the south...",
         "person" : 2
       }, {
-        "line" : "It's ok. It's the thought that counts.",
+        "line" : "It's ok. It's the thought that counts",
         "person" : 1
       }, {
-        "line" : "Oh, please go get it.",
+        "line" : "Oh, please go get it",
         "person" : 2
       }, {
         "line" : "Do you know how much effort it was to get Frank to sign it?",
         "person" : 2
       }, {
-        "line" : "Alright then. I guess I'll go on a birthday quest.",
+        "line" : "Alright then. I guess I'll go on a birthday quest",
         "person" : 1
       }, {
         "linkTo" : "/map/",
@@ -1294,10 +1378,10 @@
         "line" : "Did you meet Steve the pirate yet?",
         "person" : 2
       }, {
-        "line" : "No, not yet.",
+        "line" : "No, not yet",
         "person" : 1
       }, {
-        "line" : "You can probably find him on his ship.",
+        "line" : "You can probably find him on his ship",
         "person" : 2
       }, {
         "line" : "It's just south of here...",
@@ -1351,25 +1435,25 @@
         "line" : "I need Frank to get his wallet back from 'The Big Bastard'",
         "person" : 1
       }, {
-        "line" : "But Frank can't see straight at the moment.",
+        "line" : "But Frank can't see straight at the moment",
         "person" : 1
       }, {
-        "line" : "So he doesn't have much of a chance.",
+        "line" : "So he doesn't have much of a chance",
         "person" : 1
       }, {
         "line" : "The Big Bastard?",
         "person" : 2
       }, {
-        "line" : "That's what Frank called him.",
+        "line" : "That's what Frank called him",
         "person" : 1
       }, {
-        "line" : "Oh. That must be... I forget his name.",
+        "line" : "Oh. That must be... I forget his name",
         "person" : 2
       }, {
-        "line" : "You might be able to help Frank out.",
+        "line" : "You might be able to help Frank out",
         "person" : 2
       }, {
-        "line" : "The big fellow's a simple chap.",
+        "line" : "The big fellow's a simple chap",
         "person" : 2
       }, {
         "line" : "If you can shout out his name",
@@ -1387,22 +1471,22 @@
         "line" : "Um...",
         "person" : 2
       }, {
-        "line" : "I'm afraid I can't remember.",
+        "line" : "I'm afraid I can't remember",
         "person" : 2
       }, {
-        "line" : "I think it's got 5 letters in it.",
+        "line" : "I think it's got 5 letters in it",
         "person" : 2
       }, {
-        "line" : "And it's got something to do with Dirty Dancing.",
+        "line" : "And it's got something to do with Dirty Dancing",
         "person" : 2
       }, {
-        "line" : "The main actor. That's a good place to start.",
+        "line" : "The main actor. That's a good place to start",
         "person" : 2
       }, {
-        "line" : "Steve and Frank might remember more fully.",
+        "line" : "Steve and Frank might remember more fully",
         "person" : 2
       }, {
-        "line" : "Perhaps go check with them.",
+        "line" : "Perhaps go check with them",
         "person" : 2,
         "setState" : "findingName"
       }, {
@@ -1415,16 +1499,16 @@
         "line" : "Um...",
         "person" : 2
       }, {
-        "line" : "I'm afraid not.",
+        "line" : "I'm afraid not",
         "person" : 2
       }, {
-        "line" : "It's got something to do with Dirty Dancing.",
+        "line" : "It's got something to do with Dirty Dancing",
         "person" : 2
       }, {
-        "line" : "The main actor. That's a good place to start.",
+        "line" : "The main actor. That's a good place to start",
         "person" : 2
       }, {
-        "line" : "Steve and Frank might remember more fullly.",
+        "line" : "Steve and Frank might remember more fullly",
         "person" : 2
       }, {
         "linkTo" : "/map/"
