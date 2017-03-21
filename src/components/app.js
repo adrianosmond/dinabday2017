@@ -9,6 +9,7 @@ import Clue from './clue';
 import Travel from './travel';
 import Mountain from './mountain';
 import Race from './race';
+import Card from './card';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -32,6 +33,7 @@ export default class App extends Component {
 					<Travel path="/travel/" />
 					<Mountain path="/mountain/" />
 					<Race path="/race/" />
+					<Card path="/card/" />
 				</Router>
 			</div>
 		);

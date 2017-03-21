@@ -362,7 +362,7 @@
         "line" : "Could I borrow your rod in the mean time?",
         "person" : 1
       }, {
-        "line" : "While you wait for the rain...",
+        "line" : "While there isn't any water",
         "person" : 1
       }, {
         "line" : "Hmm",
@@ -404,7 +404,7 @@
         "line" : "I mean,",
         "person" : 2
       }, {
-        "line" : "Whoever heard of an aquaphobic swan?",
+        "line" : "Whoever heard of an aquaphobic duck?",
         "person" : 2
       }, {
         "line" : "It's only a matter of time",
@@ -426,6 +426,12 @@
       }, {
         "line" : "I could be tempted",
         "person" : 2
+      }, {
+        "line" : "Maybe you could sell the idea to me a bit...",
+        "person" : 2
+      }, {
+        "line" : "Ok...",
+        "person" : 1
       }, {
         "line" : "So tell me",
         "person" : 2
@@ -724,8 +730,16 @@
         "line" : "Just don't look at my chest while I run",
         "person" : 2
       }, {
-        "line" : "What do you say?",
+        "id" : "metLevendig",
+        "line" : "So how about it?",
         "person" : 2
+      }, {
+        "line" : "Wanna race?",
+        "person" : 2
+      }, {
+        "line" : "What do you say?",
+        "person" : 2,
+        "setState": "metLevendig"
       }, {
         "decision" : {
           "options" : [ {
@@ -764,6 +778,32 @@
         }
       }, {
         "id" : "needRod",
+        "line" : "So you're back again...",
+        "person" : 2
+      }, {
+        "line" : "The offer still stands-",
+        "person" : 2
+      }, {
+        "line" : "Beat me, shoes free",
+        "person" : 2
+      }, {
+        "line" : "You lose, no shoes",
+        "person" : 2
+      }, {
+        "line" : "Think you can take me this time?",
+        "person" : 2
+      }, {
+        "decision" : {
+          "options" : [ {
+            "linkTo" : "/race/",
+            "text" : "You betcha"
+          }, {
+            "linkTo" : "/map/",
+            "text" : "Not just now"
+          } ]
+        }
+      }, {
+        "id" : "failedQuiz",
         "line" : "So you're back again...",
         "person" : 2
       }, {
@@ -1186,6 +1226,40 @@
         "line" : "I'll do that",
         "person" : 1
       }, {
+        "id" : "metLevendig",
+        "line" : "Hi",
+        "person" : 1
+      }, {
+        "line" : "Hey there",
+        "person" : 2
+      }, {
+        "line" : "Strange question",
+        "person" : 1
+      }, {
+        "line" : "I don't suppose you know where I could get some decent outdoor shoes?",
+        "person" : 1
+      }, {
+        "line" : "I would've had some in my youth",
+        "person" : 2
+      }, {
+        "line" : "But I'm not so active any more",
+        "person" : 2
+      }, {
+        "line" : "Your best bet is probably to see if you can find any runners",
+        "person" : 2
+      }, {
+        "line" : "When I was in the running club",
+        "person" : 2
+      }, {
+        "line" : "We used to hang out at the south end of the island",
+        "person" : 2
+      }, {
+        "line" : "Ok, thanks",
+        "person" : 1
+      }, {
+        "line" : "I'll do that",
+        "person" : 1
+      }, {
         "linkTo" : "/map/"
       }, {
         "id" : "lostRace",
@@ -1227,6 +1301,9 @@
       }, {
         "line" : "And race busty maidens",
         "person" : 1
+      }, {
+        "line" : "Wait",
+        "person" : 2
       }, {
         "line" : "Did you say busty maidens?",
         "person" : 2
@@ -1367,6 +1444,36 @@
         "linkTo" : "/map/"
       }, {
         "id" : "needRod",
+        "line" : "Hey!",
+        "person" : 2
+      }, {
+        "line" : "How's the training going?",
+        "person" : 2
+      }, {
+        "line" : "Have you beaten her yet?",
+        "person" : 2
+      }, {
+        "line" : "Not yet",
+        "person" : 1
+      }, {
+        "line" : "I'm still trying to get hold of a stick and some string",
+        "person" : 1
+      }, {
+        "line" : "Oh ok",
+        "person" : 2
+      }, {
+        "line" : "Good luck",
+        "person" : 2
+      }, {
+        "line" : "I'm rooting for you",
+        "person" : 2
+      }, {
+        "line" : "Thanks!",
+        "person" : 1
+      }, {
+        "linkTo" : "/map/"
+      }, {
+        "id" : "failedQuiz",
         "line" : "Hey!",
         "person" : 2
       }, {

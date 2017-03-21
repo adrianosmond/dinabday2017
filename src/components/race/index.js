@@ -3,12 +3,18 @@ import { route } from 'preact-router';
 
 export default class Race extends Component {
 	state = {
-		started: false
+		started: false,
+		gameState: undefined
 	}
 
 	componentWillMount() {
 		this.boundKeyListener = this.keylistener.bind(this);
 		document.addEventListener("keyup", this.boundKeyListener);
+		firebase.database().ref("conversations/currentState").once("value", (result) => {
+			this.setState({
+				gameState: result.val()
+			});
+		});
 
 		firebase.database().ref("map/inventory/rod").once("value", (result) => {
 			setTimeout(() => {
@@ -50,11 +56,14 @@ export default class Race extends Component {
 		});
 
 		if (this.state.difference > 0) {
-			firebase.database().ref("conversations/currentState").set("haveBoots");
+			firebase.database().ref("conversations/currentState").set("wonRace");
 			setTimeout(() => {
 				route("/conversation/levendig/");
 			}, 2000);
 		} else {
+			if (this.state.gameState === "noBoots") {
+				firebase.database().ref("conversations/currentState").set("lostRace");
+			}
 			setTimeout(() => {
 				route("/map/");
 			}, 2000);

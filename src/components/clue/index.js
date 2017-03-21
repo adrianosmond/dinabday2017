@@ -60,9 +60,9 @@ export default class Clue extends Component {
 
 	render() {
 		return (
-			<div class={'clue' + (this.state.loaded ? ' clue--loaded' : '')}>
-				<div class={'clue__clue-image' + (this.state.clueFor? ' clue__clue-image--' + this.state.clueFor : '')}></div>
-				<div class="clue__input-wrapper">
+			<div class={'parchment' + (this.state.loaded ? ' parchment--loaded' : '')}>
+				<div class={'parchment__clue-image' + (this.state.clueFor? ' parchment__parchment-image--' + this.state.clueFor : '')}></div>
+				<div class="parchment__input-wrapper">
 					<p>Enter code when found:</p>
 					<input type="text" id="clue-input" class="pixel-input" />
 				</div>

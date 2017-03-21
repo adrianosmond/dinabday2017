@@ -1,4 +1,4 @@
-.clue {
+.parchment {
 	position: relative;
 	height:  100vh;
 	background-image: url('/assets/images/parchment.png');
@@ -14,7 +14,7 @@
 		opacity: 1;
 	}
 
-	&__clue-image {
+	&__parchment-image {
 		height: 100%;
 		image-rendering: pixelated;
 		background-size: contain;
@@ -31,6 +31,10 @@
 
 		&--wonRace {
 			background-image: url('/assets/images/wonRace.png');
+		}
+
+		&--endGame {
+			background-image: url('/assets/images/endGame.png');
 		}
 	}
 

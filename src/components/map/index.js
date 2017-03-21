@@ -18,10 +18,12 @@ export default class Map extends Component {
 		let ref = firebase.database().ref("map").once("value", (result) => {
 			let map = result.val();
 			let hideFog = map.inventory && map.inventory.map;
+			let haveBoots = map.inventory && map.inventory.boots;
 			this.setState({
 				map: map,
 				knowAboutMountains: window.sessionStorage.getItem("seen-a-mountain") === "true",
-				hideFog: hideFog
+				hideFog: hideFog,
+				haveBoots: haveBoots
 			});
 
 			setTimeout(() => {
@@ -72,8 +74,12 @@ export default class Map extends Component {
 					loading: true
 				});
 
+				let conversationURL = "/conversation/" + character + "/";
+				if (character === "envelope") {
+					conversationURL = "/card/";
+				}
+				
 				setTimeout(() => {
-					let conversationURL = "/conversation/" + character + "/";
 					route(conversationURL);
 				}, 1000);
 			}
@@ -168,15 +174,19 @@ export default class Map extends Component {
 	}
 
 	terrainPassable(height) {
-		if (height===3 && !this.state.knowAboutMountains) {
-			this.setState({
-				loading: true
-			});
+		if (height===3) {
+			if (this.state.haveBoots) {
+				return true;
+			} else if (!this.state.knowAboutMountains) {
+				this.setState({
+					loading: true
+				});
 
-			setTimeout(() => {
-				route("/mountain/");
-			}, 1000);
-		}
+				setTimeout(() => {
+					route("/mountain/");
+				}, 1000);
+			}
+		} 
 		return height > 0 && height < 3;
 	}
 
