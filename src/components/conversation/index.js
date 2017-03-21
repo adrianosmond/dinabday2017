@@ -96,6 +96,16 @@ export default class Conversation extends Component {
 					firebase.database().ref("map/rows/" + char.row + "/cols/" + char.col + "/character").set(null);
 				}
 
+				let itemToGain = this.state.scene[this.state.position].gainItem;
+				if (itemToGain) {
+					firebase.database().ref("map/inventory/" + itemToGain).set(true);
+				}
+
+				let itemToLose = this.state.scene[this.state.position].loseItem;
+				if (itemToLose) {
+					firebase.database().ref("map/inventory/" + itemToLose).set(false);
+				}
+
 				if (this.state.scene[this.state.position].linkTo) {
 					this.linkSomewhere(this.state.scene[this.state.position].linkTo);
 				}
