@@ -466,7 +466,10 @@
         "line" : "If I said I was looking for",
         "person" : 2
       }, {
-        "line" : "scenic alpine lake where cantilevered boardwalks jut out of the rockface",
+        "line" : "a scenic alpine lake",
+        "person" : 2
+      }, {
+        "line" : "where cantilevered boardwalks jut out of the rockface",
         "person" : 2
       }, {
         "decision" : {
@@ -533,7 +536,10 @@
         "line" : "I'm probably looking for a",
         "person" : 2
       }, {
-        "line" : "grassy reserve-backed soft gravel beach with wonderful mountain views",
+        "line" : "grassy reserve-backed soft gravel beach",
+        "person" : 2
+      }, {
+        "line" : "with wonderful mountain views",
         "person" : 2
       }, {
         "decision" : {
@@ -638,7 +644,10 @@
         "line" : "I'm probably looking for a",
         "person" : 2
       }, {
-        "line" : "grassy reserve-backed soft gravel beach with wonderful mountain views",
+        "line" : "grassy reserve-backed soft gravel beach",
+        "person" : 2
+      }, {
+        "line" : "with wonderful mountain views",
         "person" : 2
       }, {
         "decision" : {
