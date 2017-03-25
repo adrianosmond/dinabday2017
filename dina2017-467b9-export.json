@@ -304,6 +304,30 @@
       }, {
         "linkTo" : "/map/"
       }, {
+        "id" : "metLevendig",
+        "line" : "Hi there!",
+        "person" : 1
+      }, {
+        "line" : "I'm Dina",
+        "person" : 1
+      }, {
+        "line" : "Do you know where I could find some walking boots?",
+        "person" : 1
+      }, {
+        "line" : "I want to get over the mountains",
+        "person" : 1
+      }, {
+        "line" : "But I can't really do that in these shoes",
+        "person" : 1
+      }, {
+        "line" : "Not now...",
+        "person" : 2
+      }, {
+        "line" : "I think I'm close to getting a bite...",
+        "person" : 2
+      }, {
+        "linkTo" : "/map/"
+      }, {
         "id" : "lostRace",
         "line" : "Hi there!",
         "person" : 1
