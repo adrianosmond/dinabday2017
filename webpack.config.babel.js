@@ -46,16 +46,6 @@ module.exports = {
 				loader: 'babel'
 			},
 			{
-				// Transform our own .(scss|css) files with PostCSS and CSS-modules
-				test: /\.(scss|css)$/,
-				include: [path.resolve(__dirname, 'src/components')],
-				loader: ExtractTextPlugin.extract('style?singleton', [
-					`css-loader?modules&importLoaders=1&sourceMap=${CSS_MAPS}`,
-					'postcss-loader',
-					`sass-loader?sourceMap=${CSS_MAPS}`
-				].join('!'))
-			},
-			{
 				test: /\.(scss|css)$/,
 				exclude: [path.resolve(__dirname, 'src/components')],
 				loader: ExtractTextPlugin.extract('style?singleton', [
