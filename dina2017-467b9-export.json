@@ -436,189 +436,235 @@
         "line" : "So tell me",
         "person" : 2
       }, {
-        "line" : "Are there any lakes with [QUESTION]?",
+        "line" : "What would you recommend",
+        "person" : 2
+      }, {
+        "line" : "If I said I was looking for",
+        "person" : 2
+      }, {
+        "line" : "scenic alpine lake where cantilevered boardwalks jut out of the rockface",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question2incorrect",
-            "text" : "Question 1 incorrect"
+            "text" : "Lake Wakatipu"
           }, {
             "jumpTo" : "question2correct",
-            "text" : "Question 1 correct"
+            "text" : "Lake Marian"
           }, {
             "jumpTo" : "question2incorrect",
-            "text" : "Question 1 incorrect"
+            "text" : "Lake Dunstan"
           } ]
         }
       }, {
         "id" : "question2correct",
-        "line" : "What about [QUESTION]?",
+        "line" : "How about if I was looking for",
+        "person" : 2
+      }, {
+        "line" : "a surreally toned glacial lake",
+        "person" : 2
+      }, {
+        "line" : "backed by the glistening peaks of the Southern Alps?",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question3incorrect",
-            "text" : "Question 2 incorrect"
+            "text" : "Lake Wilkie"
           }, {
             "jumpTo" : "question3incorrect",
-            "text" : "Question 2 incorrect"
+            "text" : "Lake Tekapo"
           }, {
             "jumpTo" : "question3correct",
-            "text" : "Question 2 correct"
+            "text" : "Lake Pukaki"
           } ]
         }
       }, {
         "id" : "question3correct",
-        "line" : "And [QUESTION]?",
+        "line" : "Have you heard of any lakes",
+        "person" : 2
+      }, {
+        "id" : "question3correct",
+        "line" : "that cover the remains of a gold mining town",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question4incorrect",
-            "text" : "Question 3 incorrect"
+            "text" : "Lake Ellesmere"
           }, {
             "jumpTo" : "question4incorrect",
-            "text" : "Question 3 incorrect"
+            "text" : "Lake Hawea"
           }, {
             "jumpTo" : "question4correct",
-            "text" : "Question 3 correct"
+            "text" : "Lake Dunstan"
           } ]
         }
       }, {
         "id" : "question4correct",
-        "line" : "Where is the best [QUESTION]?",
+        "line" : "Come to think of it",
+        "person" : 2
+      }, {
+        "line" : "I'm probably looking for a",
+        "person" : 2
+      }, {
+        "line" : "grassy reserve-backed soft gravel beach with wonderful mountain views",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question5correct",
-            "text" : "Question 4 correct"
+            "text" : "Lake Wanaka"
           }, {
             "jumpTo" : "question5incorrect",
-            "text" : "Question 4 incorrect"
+            "text" : "Lake Benmore"
           }, {
             "jumpTo" : "question5incorrect",
-            "text" : "Question 4 incorrect"
+            "text" : "Lake Pukaki"
           } ]
         }
       }, {
         "id" : "question5correct",
-        "line" : "Which is the biggest [QUESTION]?",
+        "line" : "Or maybe it's a has lake that has shrunk as the forest has encroached",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question6incorrect",
-            "text" : "Question 5 incorrect"
+            "text" : "Lake Coleridge"
           }, {
             "jumpTo" : "question6correct",
-            "text" : "Question 5 correct"
+            "text" : "Lake Wilkie"
           }, {
             "jumpTo" : "question6incorrect",
-            "text" : "Question 5 incorrect"
+            "text" : "Lake Marian"
           } ]
         }
       }, {
         "id" : "question6correct",
-        "line" : "Where is the best [QUESTION]?",
+        "line" : "You know what...",
+        "person" : 2
+      }, {
+        "id" : "question6correct",
+        "line" : "What I'm actually after is a brackish lagoon",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "answersCorrect",
-            "text" : "Question 6 correct"
+            "text" : "Lake Ellesmere"
           }, {
             "jumpTo" : "answersIncorrect",
-            "text" : "Question 6 incorrect"
+            "text" : "Lake Te Anau"
           }, {
             "jumpTo" : "answersIncorrect",
-            "text" : "Question 6 incorrect"
+            "text" : "Lake Wanaka"
           } ]
         }
       }, {
         "id" : "question2incorrect",
-        "line" : "What about [QUESTION]?",
+        "line" : "How about if I was looking for",
+        "person" : 2
+      }, {
+        "line" : "a surreally toned glacial lake",
+        "person" : 2
+      }, {
+        "line" : "backed by the glistening peaks of the Southern Alps?",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question3incorrect",
-            "text" : "Question 2 incorrect"
+            "text" : "Lake Wilkie"
           }, {
             "jumpTo" : "question3incorrect",
-            "text" : "Question 2 incorrect"
+            "text" : "Lake Tekapo"
           }, {
             "jumpTo" : "question3incorrect",
-            "text" : "Question 2 correct"
+            "text" : "Lake Pukaki"
           } ]
         }
       }, {
         "id" : "question3incorrect",
-        "line" : "And [QUESTION]?",
+        "line" : "Have you heard of any lakes",
+        "person" : 2
+      }, {
+        "id" : "question3incorrect",
+        "line" : "that cover the remains of a gold mining town",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question4incorrect",
-            "text" : "Question 3 incorrect"
+            "text" : "Lake Ellesmere"
           }, {
             "jumpTo" : "question4incorrect",
-            "text" : "Question 3 incorrect"
+            "text" : "Lake Hawea"
           }, {
             "jumpTo" : "question4incorrect",
-            "text" : "Question 3 correct"
+            "text" : "Lake Dunstan"
           } ]
         }
       }, {
         "id" : "question4incorrect",
-        "line" : "Where is the best [QUESTION]?",
+        "line" : "Come to think of it",
+        "person" : 2
+      }, {
+        "line" : "I'm probably looking for a",
+        "person" : 2
+      }, {
+        "line" : "grassy reserve-backed soft gravel beach with wonderful mountain views",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question5incorrect",
-            "text" : "Question 4 correct"
+            "text" : "Lake Wanaka"
           }, {
             "jumpTo" : "question5incorrect",
-            "text" : "Question 4 incorrect"
+            "text" : "Lake Benmore"
           }, {
             "jumpTo" : "question5incorrect",
-            "text" : "Question 4 incorrect"
+            "text" : "Lake Pukaki"
           } ]
         }
       }, {
         "id" : "question5incorrect",
-        "line" : "Which is the biggest [QUESTION]?",
+        "line" : "Or maybe it's a has lake that has shrunk as the forest has encroached",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "question6incorrect",
-            "text" : "Question 5 incorrect"
+            "text" : "Lake Coleridge"
           }, {
             "jumpTo" : "question6incorrect",
-            "text" : "Question 5 correct"
+            "text" : "Lake Wilkie"
           }, {
             "jumpTo" : "question6incorrect",
-            "text" : "Question 5 incorrect"
+            "text" : "Lake Marian"
           } ]
         }
       }, {
         "id" : "question6incorrect",
-        "line" : "Where is the best [QUESTION]?",
+        "line" : "You know what...",
+        "person" : 2
+      }, {
+        "id" : "question6incorrect",
+        "line" : "What I'm actually after is a brackish lagoon",
         "person" : 2
       }, {
         "decision" : {
           "options" : [ {
             "jumpTo" : "answersIncorrect",
-            "text" : "Question 6 correct"
+            "text" : "Lake Ellesmere"
           }, {
             "jumpTo" : "answersIncorrect",
-            "text" : "Question 6 incorrect"
+            "text" : "Lake Te Anau"
           }, {
             "jumpTo" : "answersIncorrect",
-            "text" : "Question 6 incorrect"
+            "text" : "Lake Wanaka"
           } ]
         }
       }, {
