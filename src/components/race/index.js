@@ -61,7 +61,7 @@ export default class Race extends Component {
 				route("/conversation/levendig/");
 			}, 2000);
 		} else {
-			if (this.state.gameState === "noBoots") {
+			if (this.state.gameState === "metLevendig") {
 				firebase.database().ref("conversations/currentState").set("lostRace");
 			}
 			setTimeout(() => {
