@@ -9,60 +9,12 @@ export default class Map extends Component {
 		map: {
 			rows: []
 		},
-		moving: false
+		moving: false,
+		fish: {x:10, y:2}
 	};
 
 
 	componentWillMount() {
-		function makeTree(rowIdx, colIdx) {
-			firebase.database().ref("map/rows/" + rowIdx + "/cols/" + colIdx + "/trees").set(true);
-		}
-		makeTree(5, 13)
-		makeTree(6, 13)
-		makeTree(7, 13)
-		makeTree(7, 14)
-		makeTree(8, 13)
-		makeTree(8, 14)
-		makeTree(9, 13)
-		makeTree(9, 14)
-		makeTree(9, 15)
-		makeTree(10, 14)
-		makeTree(10, 15)
-		makeTree(11, 14)
-		makeTree(12, 14)
-		makeTree(12, 15)
-		makeTree(13, 14)
-		makeTree(22, 7)
-		makeTree(23, 4)
-		makeTree(23, 5)
-		makeTree(23, 6)
-		makeTree(23, 7)
-		makeTree(24, 5)
-		makeTree(24, 6)
-		makeTree(5, 13)
-		makeTree(6, 13)
-		makeTree(7, 13)
-		makeTree(7, 14)
-		makeTree(8, 13)
-		makeTree(8, 14)
-		makeTree(9, 13)
-		makeTree(9, 14)
-		makeTree(9, 15)
-		makeTree(10, 14)
-		makeTree(10, 15)
-		makeTree(11, 14)
-		makeTree(12, 14)
-		makeTree(12, 15)
-		makeTree(13, 14)
-		makeTree(22, 7)
-		makeTree(23, 4)
-		makeTree(23, 5)
-		makeTree(23, 6)
-		makeTree(23, 7)
-		makeTree(24, 5)
-		makeTree(24, 6)
-
-
 		this.walkingTimeout = null;
 		let ref = firebase.database().ref("map").on("value", (result) => {
 			let map = result.val();
@@ -83,12 +35,20 @@ export default class Map extends Component {
 		});
 
 		this.boundKeyListener = this.keylistener.bind(this);
-
+		this.fishInterval = setInterval(() => {
+			this.setState({
+				fish: {
+					x: Math.floor(Math.random()*(22)),
+					y: Math.floor(Math.random()*(27))
+				}
+			})
+		}, 1000);
 		document.addEventListener("keyup", this.boundKeyListener);
 	}
 
 	componentWillUnmount() {
 		firebase.database().ref("map").set(this.state.map);
+		clearInterval(this.fishInterval);
 		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
@@ -264,6 +224,12 @@ export default class Map extends Component {
 		);
 	}
 
+	fish() {
+		return (
+			<div class="map__fish"></div>
+		);
+	}
+
 	render() {
 		return (
 			<div class={'map' + (this.state.loading? ' map--loading' : '') + (this.state.hideFog? ' map--remember' : '')}>
@@ -277,9 +243,10 @@ export default class Map extends Component {
 								let vis = this.cellVisible(rowIdx, colIdx, this.state.hideFog);
 
 								return (
-									<div class={'map__cell map__cell--height-' + cell.height + (!vis ? ' map__cell--hidden': '') + (cell.trees ? ' map__cell--trees' : '')}>
+									<div class={'map__cell map__cell--height-' + cell.height + (!vis ? ' map__cell--hidden': '') + (vis && cell.trees ? ' map__cell--trees' : '')}>
 										{(vis && cell.character ? this.character(cell.character) : '')}
-										{(cell.trees ? this.trees() : '')}
+										{(vis && cell.trees ? this.trees() : '')}
+										{(vis && cell.height === 0 && rowIdx === this.state.fish.y && colIdx === this.state.fish.x ? this.fish() : '')}
 									</div>
 								);
 							})}
