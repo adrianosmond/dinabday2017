@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Travel extends Component {
 	state = {
@@ -7,6 +8,8 @@ export default class Travel extends Component {
 	}
 
 	componentWillMount() {
+		this.music = new MusicPlayer("/assets/audio/intro.mp3");
+
 		setTimeout(() => {
 			this.setState({
 				started: true
@@ -28,9 +31,12 @@ export default class Travel extends Component {
 			this.setState({
 				started: false
 			});
+
+			this.music.fadeOut(2000);
 		}, 7900);
 
 		setTimeout(() => {
+			this.music.stop();
 			route("/conversation/pirate/");
 		}, 9900);
 	}

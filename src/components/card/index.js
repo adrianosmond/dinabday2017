@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Card extends Component {
 	state = {
@@ -10,6 +11,8 @@ export default class Card extends Component {
 		this.setState({
 			loaded: true
 		});
+
+		this.music = new MusicPlayer("/assets/audio/conversation.mp3");
 	}
 
 	render() {

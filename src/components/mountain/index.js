@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Mountain extends Component {
 	state = {
@@ -17,9 +18,11 @@ export default class Mountain extends Component {
 		document.addEventListener("keyup", this.boundKeyListener);
 		window.sessionStorage.setItem("seen-a-mountain", "true");
 		firebase.database().ref("conversations/currentState").set("noBoots");
+		this.music = new MusicPlayer("/assets/audio/clue.mp3");
 	}
 
 	componentWillUnmount() {
+		this.music.stop(2000);
 		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
@@ -28,6 +31,7 @@ export default class Mountain extends Component {
 			this.setState({
 				started: false
 			});
+			this.music.fadeOut(2000);
 			setTimeout(() => {
 				route("/map/");
 			}, 2200);
