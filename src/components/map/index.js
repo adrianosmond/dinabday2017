@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 let blockKeys = false;
 
@@ -44,12 +45,26 @@ export default class Map extends Component {
 			})
 		}, 1000);
 		document.addEventListener("keyup", this.boundKeyListener);
+		this.music = new MusicPlayer("/assets/audio/map.mp3");
 	}
 
 	componentWillUnmount() {
+		this.music.stop();
 		firebase.database().ref("map").set(this.state.map);
 		clearInterval(this.fishInterval);
 		document.removeEventListener("keyup", this.boundKeyListener);
+	}
+
+	leaveMap(routeTo) {
+		this.setState({
+			loading: true
+		});
+
+		this.music.fadeOut(1000);
+
+		setTimeout(() => {
+			route(routeTo);
+		}, 1000);
 	}
 
 	keylistener(e) {
@@ -78,19 +93,12 @@ export default class Map extends Component {
 		} else if (code === 32) {
 			let character = this.state.map.rows[this.state.map.currentPosition.y].cols[this.state.map.currentPosition.x].character;
 			if (character) {
-
-				this.setState({
-					loading: true
-				});
-
 				let conversationURL = "/conversation/" + character + "/";
 				if (character === "envelope") {
 					conversationURL = "/card/";
 				}
-				
-				setTimeout(() => {
-					route(conversationURL);
-				}, 1000);
+
+				this.leaveMap(conversationURL);
 			}
 		}
 
@@ -186,13 +194,8 @@ export default class Map extends Component {
 			if (this.state.haveBoots) {
 				return true;
 			} else if (!this.state.knowAboutMountains) {
-				this.setState({
-					loading: true
-				});
+				this.leaveMap("/mountain/");
 
-				setTimeout(() => {
-					route("/mountain/");
-				}, 1000);
 			}
 		} 
 		return height > 0 && height < 3;

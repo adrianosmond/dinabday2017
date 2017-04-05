@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Clue extends Component {
 	state = {
@@ -15,6 +16,7 @@ export default class Clue extends Component {
 				clueFor: result.val()
 			});
 		});
+		this.music = new MusicPlayer("/assets/audio/clue.mp3");
 	}
 
 	componentDidMount() {
@@ -25,11 +27,17 @@ export default class Clue extends Component {
 		document.getElementById("clue-input").addEventListener("keyup", this.boundInputKeyListener);
 	}
 
+	componentWillUnmount() {
+		this.music.stop();
+	}
+
 	leaveClue() {
 		setTimeout(() => {
 			this.setState({
 				loaded: false
 			});
+
+			this.music.fadeOut(1000);
 
 			setTimeout(() => {
 				route("/map");

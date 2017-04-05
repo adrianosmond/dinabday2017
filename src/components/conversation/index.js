@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Conversation extends Component {
 	state = {
@@ -40,9 +41,11 @@ export default class Conversation extends Component {
 		}
 		this.boundKeyListener = this.keylistener.bind(this)
 		document.addEventListener("keyup", this.boundKeyListener);
+		this.music = new MusicPlayer("/assets/audio/conversation.mp3");
 	}
 
 	componentWillUnmount() {
+		this.music.stop();
 		document.removeEventListener("keyup", this.boundKeyListener);
 	}
 
@@ -52,6 +55,7 @@ export default class Conversation extends Component {
 			started: false,
 			ignoreKeys: true
 		});
+		this.music.fadeOut(2000);
 		setTimeout(() => {
 			route(linkTo);
 		}, 2200);

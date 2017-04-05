@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Fight extends Component {
 	state = {
@@ -26,9 +27,11 @@ export default class Fight extends Component {
 		}, 200);
 
 		this.fighterInterval = setInterval(this.updateFightState.bind(this), 250);
+		this.music = new MusicPlayer("/assets/audio/fight.mp3");
 	}
 
 	componentWillUnmount() {
+		this.music.stop();
 		document.removeEventListener("keyup", this.boundKeyListener);
 		document.removeEventListener("animationiteration", this.boundAnimationListener);
 	}
@@ -97,6 +100,9 @@ export default class Fight extends Component {
 			decided: true,
 			started: false
 		});
+
+		this.music.fadeOut(2000);
+
 		setTimeout(() => {
 			if (this.state.won) {
 				route("/conversation/fighter/");

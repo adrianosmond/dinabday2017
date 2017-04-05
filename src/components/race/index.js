@@ -39,9 +39,12 @@ export default class Race extends Component {
 			this.lastTime = new Date().getTime();
 			requestAnimationFrame(this.updateBar.bind(this));
 		});
+
+		this.music = new MusicPlayer("/assets/audio/fight.mp3");
 	}
 
 	componentWillUnmount() {
+		this.music.stop();
 		document.removeEventListener("keyup", this.boundKeyListener);
 		clearInterval(this.raceInterval);
 		clearInterval(this.timerInterval);
@@ -54,6 +57,8 @@ export default class Race extends Component {
 		this.setState({
 			started: false
 		});
+
+		this.music.fadeOut(2000);
 
 		if (this.state.difference > 0) {
 			firebase.database().ref("conversations/currentState").set("wonRace");
