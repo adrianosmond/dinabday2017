@@ -17,7 +17,7 @@ export default class Map extends Component {
 
 	componentWillMount() {
 		this.walkingTimeout = null;
-		let ref = firebase.database().ref("map").on("value", (result) => {
+		let ref = firebase.database().ref("map").once("value", (result) => {
 			let map = result.val();
 			let hideFog = map.inventory && map.inventory.map;
 			let haveBoots = map.inventory && map.inventory.boots;

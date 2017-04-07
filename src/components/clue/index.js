@@ -8,9 +8,11 @@ export default class Clue extends Component {
 	}
 
 	componentWillMount() {
-		this.boundInputKeyListener = this.inputKeyListener.bind(this)
+		// this.boundInputKeyListener = this.inputKeyListener.bind(this);
+		console.log("mounted");
 
 		firebase.database().ref("conversations/currentState").once("value", (result) => {
+			console.log("result", result.val());
 			this.setState({
 				loaded: true,
 				clueFor: result.val()
@@ -21,18 +23,15 @@ export default class Clue extends Component {
 		this.music = new MusicPlayer("/assets/audio/clue.mp3");
 	}
 
-	componentDidMount() {
-		var inputEl = document.getElementById("clue-input");
-		inputEl.addEventListener("keyup", this.boundInputKeyListener);
-		inputEl.value = "";
-	}
-
-	componentDidUnmount() {
-		document.getElementById("clue-input").removeEventListener("keyup", this.boundInputKeyListener);
-	}
+	// componentDidMount() {
+	// 	var inputEl = document.getElementById("clue-input");
+	// 	inputEl.addEventListener("keyup", this.boundInputKeyListener);
+	// 	inputEl.value = "";
+	// }
 
 	componentWillUnmount() {
 		this.music.stop();
+		// document.getElementById("clue-input").removeEventListener("keyup", this.boundInputKeyListener);
 	}
 
 	leaveClue() {
@@ -76,7 +75,7 @@ export default class Clue extends Component {
 				<div class={'parchment__parchment-image' + (this.state.clueFor? ' parchment__parchment-image--' + this.state.clueFor : '')}></div>
 				<div class="parchment__input-wrapper">
 					<p>Enter code when found:</p>
-					<input type="text" id="clue-input" class="pixel-input" />
+					<input type="text" id="clue-input" class="pixel-input" onKeyPress={this.inputKeyListener.bind(this)} />
 				</div>
 			</div>
 		);

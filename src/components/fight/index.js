@@ -14,7 +14,6 @@ export default class Fight extends Component {
 
 	componentWillMount() {
 		this.boundKeyListener = this.keylistener.bind(this)
-		this.boundInputKeyListener = this.inputKeyListener.bind(this)
 		this.boundAnimationListener = this.animationListener.bind(this);
 
 		document.addEventListener("keyup", this.boundKeyListener);
@@ -34,14 +33,6 @@ export default class Fight extends Component {
 		this.music.stop();
 		document.removeEventListener("keyup", this.boundKeyListener);
 		document.removeEventListener("animationiteration", this.boundAnimationListener);
-	}
-
-	componentDidMount() {
-		document.getElementById("shout-out").addEventListener("keyup", this.boundInputKeyListener);
-	}
-
-	componentDidUnmount() {
-		document.getElementById("shout-out").removeEventListener("keyup", this.boundInputKeyListener);
 	}
 
 	animationListener(e) {
@@ -176,7 +167,7 @@ export default class Fight extends Component {
 				<div class="scene__bg scene__bg--4"></div>
 				<div class="scene__bg scene__bg--5"></div>
 				<div class="scene__instruction">
-					<label>Shout out: <input type="text" id="shout-out" class="pixel-input" disabled={!this.state.decided}/></label>
+					<label>Shout out: <input type="text" id="shout-out" class="pixel-input" disabled={!this.state.decided} onKeyPress={this.inputKeyListener.bind(this)}/></label>
 				</div>
 				<div class="scene__people scene__people--wide">
 					<div class={'scene__person scene__person--brute'
