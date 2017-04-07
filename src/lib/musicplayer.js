@@ -1,7 +1,7 @@
 export default class MusicPlayer {
-	constructor (path) {
+	constructor (path, loop = true) {
 		this.music = new Audio(path);
-		this.music.loop = true;
+		this.music.loop = loop;
 		this.music.volume = 1;
 		this.music.play();
 	}

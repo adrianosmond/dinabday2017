@@ -8,23 +8,22 @@ export default class Travel extends Component {
 	}
 
 	componentWillMount() {
+		firebase.database().ref("conversations/currentState").set("secondIsland");
+		//hide old ship x,y -> 11,10
+		firebase.database().ref("map/rows/10/cols/11/character").set(null);
+		//hide old pirate x,y -> 12, 10
+		firebase.database().ref("map/rows/10/cols/12/character").set(null);
+		//move ship x,y -> 11,13
+		firebase.database().ref("map/rows/13/cols/11/character").set("ship");
+		//move dina x,y -> 10,19
+		firebase.database().ref("map/currentPosition").set({x: 12, y: 13});
+
 		this.music = new MusicPlayer("/assets/audio/intro.mp3");
 
 		setTimeout(() => {
 			this.setState({
 				started: true
 			});
-
-			firebase.database().ref("conversations/currentState").set("secondIsland");
-			//hide old ship x,y -> 11,10
-			firebase.database().ref("map/rows/10/cols/11/character").set(null);
-			//hide old pirate x,y -> 12, 10
-			firebase.database().ref("map/rows/10/cols/12/character").set(null);
-			//move ship x,y -> 11,13
-			firebase.database().ref("map/rows/13/cols/11/character").set("ship");
-			//move dina x,y -> 10,19
-			firebase.database().ref("map/currentPosition").set({x: 12, y: 13});
-
 		}, 200);
 
 		setTimeout(() => {

@@ -12,7 +12,15 @@ export default class Card extends Component {
 			loaded: true
 		});
 
-		this.music = new MusicPlayer("/assets/audio/conversation.mp3");
+		this.music = new MusicPlayer("/assets/audio/birthday.mp3", false);
+	}
+
+
+	componentWillUnmount() {
+		this.music.fadeOut(500);
+		setTimeout(()=> {
+			this.music.stop();
+		}, 500)
 	}
 
 	render() {
