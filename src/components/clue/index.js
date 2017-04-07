@@ -49,14 +49,14 @@ export default class Clue extends Component {
 
 		if (e.keyCode === 13) {
 			let val = e.target.value.trim().toLowerCase();
-			if (this.state.clueFor === "wonFight" && val === "4f8af0bd") {
+			if (this.state.clueFor === "wonFight" && val === "mappybday") {
 				firebase.database().ref("conversations/currentState").set("haveMap");
 				firebase.database().ref("map/inventory/map").set(true);
 				this.leaveClue();
-			} else if (this.state.clueFor === "secondIsland" && val === "adb59e37") {
+			} else if (this.state.clueFor === "secondIsland" && val === "surplise") {
 				firebase.database().ref("map/inventory/chocolate").set(true);
 				this.leaveClue();
-			} else if (this.state.clueFor === "wonRace" && val === "8b62d517") {
+			} else if (this.state.clueFor === "wonRace" && val === "hikelass") {
 				firebase.database().ref("conversations/currentState").set("haveBoots");
 				firebase.database().ref("map/inventory/boots").set(true);
 				this.leaveClue();
