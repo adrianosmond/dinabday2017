@@ -40,8 +40,8 @@ export default class Fight extends Component {
 		document.getElementById("shout-out").addEventListener("keyup", this.boundInputKeyListener);
 	}
 
-	componentDidUnount() {
-		document.getElementById("shout-out").addEventListener("keyup", this.boundInputKeyListener);
+	componentDidUnmount() {
+		document.getElementById("shout-out").removeEventListener("keyup", this.boundInputKeyListener);
 	}
 
 	animationListener(e) {

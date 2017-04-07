@@ -16,15 +16,19 @@ export default class Clue extends Component {
 				clueFor: result.val()
 			});
 		});
+
+
 		this.music = new MusicPlayer("/assets/audio/clue.mp3");
 	}
 
 	componentDidMount() {
-		document.getElementById("clue-input").addEventListener("keyup", this.boundInputKeyListener);
+		var inputEl = document.getElementById("clue-input");
+		inputEl.addEventListener("keyup", this.boundInputKeyListener);
+		inputEl.value = "";
 	}
 
-	componentDidUnount() {
-		document.getElementById("clue-input").addEventListener("keyup", this.boundInputKeyListener);
+	componentDidUnmount() {
+		document.getElementById("clue-input").removeEventListener("keyup", this.boundInputKeyListener);
 	}
 
 	componentWillUnmount() {
