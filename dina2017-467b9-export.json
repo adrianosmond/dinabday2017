@@ -1893,14 +1893,20 @@
       }, {
         "line" : "I'm afraid not",
         "person" : 2
+      },{
+        "line" : "It's got 5 letters in it",
+        "person" : 2
       }, {
-        "line" : "It's got something to do with Dirty Dancing",
+        "line" : "And it's got something to do with Dirty Dancing",
         "person" : 2
       }, {
         "line" : "The main actor. That's a good place to start",
         "person" : 2
       }, {
-        "line" : "Steve and Frank might remember more fullly",
+        "line" : "That's all I can remember",
+        "person" : 2
+      }, {
+        "line" : "Steve and Frank might remember more fully",
         "person" : 2
       }, {
         "linkTo" : "/map/"

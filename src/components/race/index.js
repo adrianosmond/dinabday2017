@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { route } from 'preact-router';
+import MusicPlayer from 'musicplayer.js';
 
 export default class Race extends Component {
 	state = {
